@@ -3,17 +3,13 @@
 # Table name: users
 #
 #  id              :bigint           not null, primary key
-#  age             :integer
 #  bio             :string(160)
 #  email           :string           not null
 #  first_name      :string           not null
 #  gender          :string
-#  language        :string
 #  last_name       :string           not null
-#  location        :string
 #  password_digest :string           not null
 #  session_token   :string           not null
-#  username        :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #
@@ -23,14 +19,13 @@
 #  index_users_on_first_name     (first_name)
 #  index_users_on_last_name      (last_name)
 #  index_users_on_session_token  (session_token) UNIQUE
-#  index_users_on_username       (username) UNIQUE
 #
 class User < ApplicationRecord
     attr_reader :password
     before_validation :ensure_session_token
 
-    validates :email, :username, :first_name, :last_name, :password_digest, :session_token, presence: true
-    validates :email, :username, :session_token, uniqueness: true
+    validates :email, :first_name, :last_name, :password_digest, :session_token, presence: true
+    validates :email, :session_token, uniqueness: true
     validates :password, length: {minimum: 6, allow_nil: true}
     validates :bio, allow_blank: true, length: {maximum: 160}
     validates :gender, inclusion: ['male', 'female', 'non-binary'], allow_blank: true
@@ -69,5 +64,5 @@ class User < ApplicationRecord
     def ensure_session_token
         self.session_token ||= User.generate_session_token
     end
-    # test comment for push
+    
 end
