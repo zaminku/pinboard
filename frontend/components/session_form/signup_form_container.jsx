@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import SessionForm from "./session_form";
 import React from "react";
 import { Link } from "react-router-dom";
+import { signup, clearErrors } from "../../actions/session_actions";
 
 const mSTP = ({errors, session}, ownProps) => ({
     errors: errors.session,
@@ -12,7 +13,8 @@ const mSTP = ({errors, session}, ownProps) => ({
 })
 
 const mDTP = dispatch => ({
-    processForm: (user) => dispatch(signup(user))
+    processForm: (user) => dispatch(signup(user)),
+    clearErrors: () => dispatch(clearErrors())
 })
 
 export default connect(mSTP, mDTP)(SessionForm)

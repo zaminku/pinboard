@@ -7,11 +7,12 @@ class SessionForm extends React.Component {
         this.state = {
             email: "",
             password: "", 
-            firstName: "",
-            lastName: ""
+            first_name: "",
+            last_name: ""
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemoLogin = this.handleDemoLogin.bind(this);
     }
 
     handleSubmit(e) {
@@ -25,7 +26,14 @@ class SessionForm extends React.Component {
         return e => this.setState({[field]: e.currentTarget.value})
     }
 
+    componentWillUnmount() {
+        this.props.clearErrors();
+    }
+
     renderErrors() {
+        // if (this.props.errors) {
+        //     return(<div className="session-errors">this.props.errors[0]</div>)
+        // }
         return(
             <ul>
                 {
@@ -36,6 +44,15 @@ class SessionForm extends React.Component {
             </ul>
         )
     }
+
+    handleDemoLogin(e) {
+        e.preventDefault();
+        // e.stopPropagation();
+        let demoUser = {email: "sample@gmail.com", password: "123456"};
+        this.props.processForm(demoUser)
+            .then((user) => this.props.history.push(`/`))
+    }
+
 
     render() {
         const {formType, navLink} = this.props;
@@ -49,22 +66,28 @@ class SessionForm extends React.Component {
                     />
                 </label>
                 <br />
-                <label>First Name:
-                    <input 
-                        type="text"
-                        value={this.state.firstName}
-                        onChange={this.update('firstName')}
-                    />
-                </label>
-                <br />
-                <label>Last Name:
-                    <input 
-                        type="text"
-                        value={this.state.lastName}
-                        onChange={this.update('lastName')}
-                    />
-                </label>
-                <br />
+                {
+                    (formType==="Sign up") ? (
+                            <div>
+                                <label>First Name:
+                                    <input 
+                                        type="text"
+                                        value={this.state.first_name}
+                                        onChange={this.update('first_name')}
+                                    />
+                                </label>
+                                <br />
+                                <label>Last Name:
+                                    <input 
+                                        type="text"
+                                        value={this.state.last_name}
+                                        onChange={this.update('last_name')}
+                                    />
+                                </label>
+                                <br />
+                            </div>
+                        ) : (<div></div>)
+                } 
                 <label>Password:
                     <input 
                         type="password"
@@ -76,6 +99,8 @@ class SessionForm extends React.Component {
                 <button className="submit-button" type="submit">{formType}</button>
                 {this.renderErrors()}
                 {navLink}
+                <br />
+                {formType==="Log in" ? <button onClick={this.handleDemoLogin}>Demo Login</button> : <div></div>}
             </form>
         )
     }
