@@ -4,10 +4,12 @@ import React from "react"
 import { Link } from "react-router-dom"
 import { login } from "../../actions/session_actions"
 
-const mSTP = ({errors}, ownProps) => ({
+const mSTP = ({errors, session}, ownProps) => ({
     errors: errors.session,
     formType: 'Log in',
-    navLink: <Link to="/signup">Not on Pinboard yet? Sign up now</Link>
+    navLink: <Link to="/signup">Not on Pinboard yet? Sign up now</Link>,
+    currUserId: session.id,
+    history: ownProps.history
 })
 
 const mDTP = dispatch => ({
