@@ -61,41 +61,49 @@ class SessionForm extends React.Component {
         return(
             <form onSubmit={this.handleSubmit} className="login-form-box">
                 <div onClick={this.props.closeModal} className="close-x">X</div>
-                <label>Email:
+                <label>
                     <input 
                         type="text"
                         value={this.state.email}
                         onChange={this.update('email')}
+                        className="session-input"
+                        placeholder="Email"
                     />
                 </label>
                 <br />
                 {
                     (formType==="Sign up") ? (
                             <div>
-                                <label>First Name:
+                                <label>
                                     <input 
                                         type="text"
                                         value={this.state.firstName}
                                         onChange={this.update('firstName')}
+                                        className="session-input"
+                                        placeholder="First Name"
                                     />
                                 </label>
                                 <br />
-                                <label>Last Name:
+                                <label>
                                     <input 
                                         type="text"
                                         value={this.state.lastName}
                                         onChange={this.update('lastName')}
+                                        className="session-input"
+                                        placeholder="Last Name"
                                     />
                                 </label>
                                 <br />
                             </div>
                         ) : (<div></div>)
                 } 
-                <label>Password:
+                <label>
                     <input 
                         type="password"
                         value={this.state.password}
                         onChange={this.update('password')}
+                        className="session-input"
+                        placeholder="Password"
                     />
                 </label>
                 <br />
