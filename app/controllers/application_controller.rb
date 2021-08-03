@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-    helper_method :require_login, :logged_in?
+    helper_method :require_login, :logged_in?, :current_user
 
     before_action :underscore_params!
     def underscore_params!
