@@ -3,6 +3,7 @@ import SessionForm from "./session_form"
 import React from "react"
 import { Link } from "react-router-dom"
 import { login, clearErrors } from "../../actions/session_actions"
+import { openModal, closeModal } from "../../actions/modal_actions"
 
 const mSTP = ({errors, session}, ownProps) => ({
     errors: errors.session,
@@ -14,7 +15,13 @@ const mSTP = ({errors, session}, ownProps) => ({
 
 const mDTP = dispatch => ({
     processForm: (user) => dispatch(login(user)),
-    clearErrors: () => dispatch(clearErrors()),
+    otherForm: (
+        <button onClick={() => dispatch(openModal('signup'))}>
+            Sign up
+        </button>
+    ),
+    closeModal: () => dispatch(closeModal()),
+    clearErrors: () => dispatch(clearErrors())
 })
 
 export default connect(mSTP, mDTP)(SessionForm)

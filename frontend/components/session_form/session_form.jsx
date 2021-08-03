@@ -19,7 +19,7 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user)
-            .then((user) => this.props.history.push(`/`))
+            // .then((user) => this.props.history.push(`/`))
     }
 
     update(field) {
@@ -50,14 +50,15 @@ class SessionForm extends React.Component {
         // e.stopPropagation();
         let demoUser = {email: "sample@gmail.com", password: "123456"};
         this.props.processForm(demoUser)
-            .then((user) => this.props.history.push(`/`))
+            // .then((user) => this.props.history.push(`/`))
     }
 
 
     render() {
-        const {formType, navLink} = this.props;
+        const {formType, navLink, otherForm} = this.props;
         return(
             <form onSubmit={this.handleSubmit} className="login-form-box">
+                <div onClick={this.props.closeModal} className="close-x">X</div>
                 <label>Email:
                     <input 
                         type="text"
@@ -98,7 +99,8 @@ class SessionForm extends React.Component {
                 <br />
                 <button className="submit-button" type="submit">{formType}</button>
                 {this.renderErrors()}
-                {navLink}
+                {/* {navLink} */}
+                {otherForm}
                 <br />
                 {formType==="Log in" ? <button onClick={this.handleDemoLogin}>Demo Login</button> : <div></div>}
             </form>
