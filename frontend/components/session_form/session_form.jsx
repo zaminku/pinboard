@@ -19,6 +19,7 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user)
+            .then(() => this.props.closeModal())
             // .then((user) => this.props.history.push(`/`))
     }
 
@@ -50,6 +51,7 @@ class SessionForm extends React.Component {
         // e.stopPropagation();
         let demoUser = {email: "sample@gmail.com", password: "123456"};
         this.props.processForm(demoUser)
+            .then(() => this.props.closeModal())
             // .then((user) => this.props.history.push(`/`))
     }
 
