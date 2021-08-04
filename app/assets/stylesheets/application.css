@@ -14,6 +14,58 @@
  *= require_self
  */
 
+* {
+    font-family: sans-serif;
+}
+
+.top-nav-item {
+    display: inline-block;
+}
+
+.logo-name.top-nav-item {
+    font-size: 20px;
+    position: relative;
+    bottom: 12px;   
+
+}
+
+.login-signup {
+    justify-content: right;
+    align-items: right;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.greeting-container {
+    margin-top: 0px;
+    margin-right: 5px;
+}
+
+.greeting-button {
+    border-radius: 24px;
+    border-style: solid;
+    border-color: darkgrey;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 8px;
+    padding: 8px 12px;
+}
+
+.greeting-button.login {
+    background-color: #E60023;
+    border-color: #E60023;
+    color: white;
+}
+
+.greeting-button.signup {
+    background-color: #EFEFEF;
+    border-color: #EFEFEF;
+    color: black;
+}
 
 .modal-background {
     position: fixed;
@@ -31,8 +83,43 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(255, 255, 255);
-    padding: 8px;
+    margin: 0px 16px 0px 16px;
     border-radius: 3%;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form-box {
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px 0px 10px;; 
+    margin: 10px;
+}
+
+.login-form-box > div > input {
+    justify-content: center;
+    align-items: center;
+}
+
+.form-logo {
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: darkgrey;
+}
+
+.login-form-box > * {
+    justify-content: center;
+    text-align: center;
+    /* margin: 24px 10px 24px 10px; */
+}
+
+.login-form-box {
+    margin: 24px 10px 24px 10px;
 }
 
 .close-x {
@@ -40,13 +127,99 @@
     margin-top: 10px;
     margin-bottom: 1px;
     text-align: right;
-    color: red;
+    color: rgb(17, 17, 17);
     font-family: Arial;
+    cursor: pointer;
 }
 
-input {
-    border-radius: 10px;
-    margin: 2px;
+.session-input {
+    padding: 8px 16px;
+    margin-top: 8px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    vertical-align: middle;
+    width: 100%;
+
+    display: inline-block;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 80%;
+    
+}
+
+h1.session-form {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: rgb(51, 51, 51); 
+    font-size: 36px; 
+    font-weight: 600; 
+    -webkit-font-smoothing: antialiased; 
+    letter-spacing: -1.2px; 
+    word-break: break-word;
+    padding: 0px 20px 0px 20px;
+}
+
+.submit-button {
+    height: 40px;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 0px 18px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: rgb(230, 0, 35);
+    border-color:rgb(230, 0, 35);
     border-style: solid;
-    border-color: black;
+    color: rgb(255, 255, 255);
+    width: 80%;
+}
+
+p.session-form {
+    margin-bottom: 16px; 
+    margin-top: 16px; 
+    overflow: hidden; 
+    text-align: center; 
+    font-size: 14px; 
+    color: rgb(51, 51, 51); 
+    font-weight: bold;
+}
+
+.demo-button {
+    height: 40px;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 0px 18px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+    background-color: rgb(24, 119, 242);
+    border-color:rgb(24, 119, 242);
+    border-style: solid;
+    color: rgb(255, 255, 255);
+    width: 80%;
+}
+
+.session-errors {
+    color:#E60023;
+}
+
+.other-form-button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    font-weight: bold;
 }

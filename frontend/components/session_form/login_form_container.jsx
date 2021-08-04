@@ -16,7 +16,7 @@ const mSTP = ({errors, session}, ownProps) => ({
 const mDTP = dispatch => ({
     processForm: (user) => dispatch(login(user)),
     otherForm: (
-        <button onClick={() => dispatch(openModal('signup'))}>
+        <button className="other-form-button" onClick={() => dispatch(openModal('signup'))}>
             Not on Pinboard yet? Sign up now
         </button>
     ),

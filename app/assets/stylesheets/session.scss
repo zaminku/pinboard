@@ -3,7 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.logo {
-    width: 5%;
-    height: 5%;
+.logo-img, .form-logo{
+    width: 40px;
+    height: 40px;
+}
+
+.logo-name {
+    color: #e60023;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    margin-top: 0px;
 }

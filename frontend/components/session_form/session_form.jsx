@@ -32,18 +32,19 @@ class SessionForm extends React.Component {
     }
 
     renderErrors() {
-        // if (this.props.errors) {
-        //     return(<div className="session-errors">this.props.errors[0]</div>)
-        // }
-        return(
-            <ul>
-                {
-                    this.props.errors.map((error, i) => (
-                        <li key={i}>{error}</li>
-                    ))
-                }
-            </ul>
-        )
+
+        if (this.props.errors) {
+            return (<div className="session-errors">{this.props.errors[0]}</div>)
+        }
+        // return(
+        //     <ul>
+        //         {
+        //             this.props.errors.map((error, i) => (
+        //                 <li key={i}>{error}</li>
+        //             ))
+        //         }
+        //     </ul>
+        // )
     }
 
     handleDemoLogin(e) {
@@ -60,59 +61,76 @@ class SessionForm extends React.Component {
         const {formType, navLink, otherForm} = this.props;
         return(
             <form onSubmit={this.handleSubmit} className="login-form-box">
-                <div onClick={this.props.closeModal} className="close-x">X</div>
-                <label>
+                <div onClick={this.props.closeModal} className="close-x"><span>X</span></div>
+                <div>
+                    <img className="form-logo" src="https://i.pinimg.com/originals/1b/76/01/1b7601e035a83c13c208b4ec905ee6d9.png" />
+                </div>
+
+                <h1 className="session-form">Welcome to Pinboard</h1>
+
+                <div>
                     <input 
                         type="text"
                         value={this.state.email}
                         onChange={this.update('email')}
-                        className="session-input"
+                        className="email session-input"
                         placeholder="Email"
-                    />
-                </label>
-                <br />
+                    />                    
+                </div>
+
                 {
                     (formType==="Sign up") ? (
-                            <div>
-                                <label>
-                                    <input 
-                                        type="text"
-                                        value={this.state.firstName}
-                                        onChange={this.update('firstName')}
-                                        className="session-input"
-                                        placeholder="First Name"
-                                    />
-                                </label>
-                                <br />
-                                <label>
-                                    <input 
-                                        type="text"
-                                        value={this.state.lastName}
-                                        onChange={this.update('lastName')}
-                                        className="session-input"
-                                        placeholder="Last Name"
-                                    />
-                                </label>
-                                <br />
-                            </div>
+                        <div>
+                            <input 
+                                type="text"
+                                value={this.state.firstName}
+                                onChange={this.update('firstName')}
+                                className="first-name session-input"
+                                placeholder="First Name"
+                            />
+                            <br />
+                        </div>
                         ) : (<div></div>)
                 } 
-                <label>
+                {
+                    (formType==="Sign up") ? (
+                        <div>
+                            <input 
+                                type="text"
+                                value={this.state.lastName}
+                                onChange={this.update('lastName')}
+                                className="last-name session-input"
+                                placeholder="Last Name"
+                            />
+                            <br />
+                        </div>
+                        ) : (<div></div>)
+                } 
+
+                <div>
                     <input 
                         type="password"
                         value={this.state.password}
                         onChange={this.update('password')}
-                        className="session-input"
+                        className="password session-input"
                         placeholder="Password"
                     />
-                </label>
+                </div>
                 <br />
-                <button className="submit-button" type="submit">{formType}</button>
-                {this.renderErrors()}
-                {/* {navLink} */}
-                {otherForm}
+                <div className="session-errors">
+                    {this.renderErrors()}
+                </div>
+                <div>
+                    <button className="submit-button" type="submit">{formType}</button>
+                    {formType === "Log in" ? (<div><p className="session-form">OR</p><button className="demo-button" onClick={this.handleDemoLogin}>Demo Log in</button></div>) : <div></div>}
+                </div>
                 <br />
-                {formType==="Log in" ? <button onClick={this.handleDemoLogin}>Demo Login</button> : <div></div>}
+                
+                <div>
+                    {otherForm}
+                </div>
+
+                <br />
             </form>
         )
     }
