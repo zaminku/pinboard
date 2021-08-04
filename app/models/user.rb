@@ -30,6 +30,10 @@ class User < ApplicationRecord
     validates :bio, allow_blank: true, length: {maximum: 160}
     validates :gender, inclusion: ['male', 'female', 'non-binary'], allow_blank: true
 
+    has_many :pins,
+        foreign_key: :user_id,
+        class_name: :Pin
+
     def self.generate_session_token
         SecureRandom.urlsafe_base64
     end
