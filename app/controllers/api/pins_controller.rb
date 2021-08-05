@@ -2,7 +2,8 @@ class Api::PinsController < ApplicationController
     
     def create
         @pin = Pin.new(pin_params)
-        # @pin.user_id = current_user.id
+        @pin.user_id = current_user.id
+        @pin.photo_url.attach(params[:pin][:photoUrl])
         
         if @pin.save
             render "api/pins/show"
