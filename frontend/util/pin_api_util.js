@@ -12,10 +12,12 @@ export const fetchPin = pinId => (
     })
 )
 
-export const createPin = pin => (
+export const createPin = pinFormData => (
     $.ajax({
         method: 'POST',
         url: '/api/pins',
-        data: {pin}
+        data: pinFormData,
+        contentType: false,
+        processData: false
     })
 )

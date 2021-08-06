@@ -12,7 +12,7 @@ class PinIndexItem extends React.Component {
             <li>
                 <h1>{pin.title}</h1>
                 <p>{pin.description}</p>
-                <img src={pin.photoUrl}/>
+                <img className="pin-pic" src={pin.photoUrl}/>
             </li>
         )
     }

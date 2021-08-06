@@ -237,3 +237,13 @@ p.session-form {
     font-size: 20px;
     margin: 10px 10px 0px 0px;
 }
+
+.pin-preview {
+    max-width: 20vh;
+    max-height: 20vh;
+}
+
+.pin-pic {
+    max-width: 60vh;
+    max-height: 60vh;
+}

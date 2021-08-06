@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import PinIndex from "./pin_index";
+import { fetchPins } from "../../actions/pin_actions"
 
 const mSTP = ({entities}) => ({
     pins: Object.values(entities.pins)

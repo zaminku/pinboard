@@ -32,24 +32,13 @@ class SessionForm extends React.Component {
     }
 
     renderErrors() {
-
         if (this.props.errors) {
             return (<div className="session-errors">{this.props.errors[0]}</div>)
         }
-        // return(
-        //     <ul>
-        //         {
-        //             this.props.errors.map((error, i) => (
-        //                 <li key={i}>{error}</li>
-        //             ))
-        //         }
-        //     </ul>
-        // )
     }
 
     handleDemoLogin(e) {
         e.preventDefault();
-        // e.stopPropagation();
         let demoUser = {email: "sample@gmail.com", password: "123456"};
         this.props.processForm(demoUser)
             .then(() => this.props.closeModal())

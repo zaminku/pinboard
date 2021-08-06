@@ -3,13 +3,17 @@ class Api::PinsController < ApplicationController
     def create
         @pin = Pin.new(pin_params)
         @pin.user_id = current_user.id
-        @pin.photo_url.attach(params[:pin][:photoUrl])
-        
-        if @pin.save
-            render "api/pins/show"
+        if params[:pin][:photo] != "null"
+            @pin.photo.attach(params[:pin][:photo])
+            if @pin.save
+                render "api/pins/show"
+            else
+                render json: @pin.errors.full_messages, status: 422
+            end
         else
-            render json: @pin.errors.full_messages, status: 422
+            render json: ["No photo attached"], status: 422
         end
+        
     end
     
     def show
