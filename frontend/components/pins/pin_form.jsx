@@ -36,7 +36,9 @@ class PinForm extends React.Component {
         const pinFormData = new FormData();
         pinFormData.append('pin[title]', this.state.title);
         pinFormData.append('pin[description]', this.state.description);
-        pinFormData.append('pin[photo]', this.state.photoFile);
+        if (this.state.photoFile) {
+            pinFormData.append('pin[photo]', this.state.photoFile);
+        }
         this.props.createPin(pinFormData);
     }
 
