@@ -2,6 +2,7 @@ import * as APIUtil from "../util/pin_api_util";
 
 export const RECEIVE_PINS = "RECEIVE_PINS";
 export const RECEIVE_PIN = "RECEIVE_PIN";
+export const REMOVE_PIN = "REMOVE_PIN";
 export const RECEIVE_PIN_ERRORS = "RECEIVE_PIN_ERRORS";
 export const CLEAR_PIN_ERRORS = "CLEAR_PIN_ERRORS";
 
@@ -13,6 +14,11 @@ const receivePins = pins => ({
 const receivePin = pin => ({
     type: RECEIVE_PIN,
     pin
+})
+
+const removePin = pinId => ({
+    type: REMOVE_PIN,
+    pinId
 })
 
 export const receivePinErrors = errors => ({
@@ -42,3 +48,14 @@ export const createPin = pin => dispatch => (
             err => dispatch(receivePinErrors(err.responseJSON)))
 )
 
+export const updatePin = pin => dispatch => (
+    APIUtil.updatePin(pin)
+        .then(pin => dispatch(receivePin(pin)),
+            err => dispatch(receivePinErrors(err.responseJSON)))
+)
+
+export const deletePin = pinId => dispatch => (
+    APIUtil.deletePin(pinId)
+        .then(() => dispatch(removePin(pinId)),
+            err => dispatch(receivePinErrors(err.responseJSON)))
+)

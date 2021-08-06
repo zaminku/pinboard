@@ -1,5 +1,5 @@
 import React from "react";
-import PinIndexItem from "./pin_index_item";
+import PinIndexItemContainer from "./pin_index_item_container";
 import PinFormContainer from "./pin_form_container";
 
 class PinIndex extends React.Component {
@@ -20,7 +20,7 @@ class PinIndex extends React.Component {
                 <ul>
                     {
                         pins.map(pin => (
-                            <PinIndexItem pin={pin} key={pin.id} />
+                            <PinIndexItemContainer pin={pin} key={pin.id} />
                         ))
                     }
                 </ul>

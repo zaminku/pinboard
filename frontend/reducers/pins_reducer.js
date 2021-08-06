@@ -1,4 +1,4 @@
-import { RECEIVE_PINS, RECEIVE_PIN,  } from "../actions/pin_actions";
+import { RECEIVE_PINS, RECEIVE_PIN, REMOVE_PIN  } from "../actions/pin_actions";
 
 const pinsReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -9,6 +9,9 @@ const pinsReducer = (state = {}, action) => {
             return action.pins;   
         case RECEIVE_PIN:
             newState[action.pin.id] = action.pin;
+            return newState;
+        case REMOVE_PIN:
+            delete newState[action.pinId];
             return newState;
         default:
             return state;

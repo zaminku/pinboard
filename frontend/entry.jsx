@@ -4,7 +4,7 @@ import configureStore from "./store/store";
 import Root from "./components/root"
 
 import {login, logout, signup} from "./actions/session_actions"
-import {fetchPins, fetchPin, createPin} from "./actions/pin_actions"
+import {fetchPins, fetchPin, createPin, updatePin, deletePin} from "./actions/pin_actions"
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -32,6 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.fetchPins = fetchPins;
     window.fetchPin = fetchPin;
     window.createPin = createPin;
+    window.updatePin = updatePin;
+    window.deletePin = deletePin;
     
     // const store = configureStore();
     window.getState = store.getState;
@@ -40,11 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // window variables for sample user and sample pin
     window.user = { email: "sample@gmail.com", username: "sample123", password: "123456", first_name: "Sample", last_name: "Name", age: 24, gender: "male", bio: "this is my sample account", language: "English", location: "Texas" }
     window.pin = {
-        "user_id": 3,
-        "title": "Harden",
-        "description": "basketball",
-        "pin_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/JamesHardenWSH.jpg/800px-JamesHardenWSH.jpg"
-}
+        "id": 20,
+        "title": "escalator",
+        "description": "not taking the stairs"
+    }
 
 
     const root = document.getElementById("root");
