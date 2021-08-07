@@ -2,8 +2,8 @@ import { connect } from "react-redux";
 import PinIndexItem from "./pin_index_item";
 import { openModal } from "../../actions/modal_actions";
 
-const mSTP = (state, ownProps) => ({
-
+const mSTP = ({entities, session}, ownProps) => ({
+    currentUserId: session.id
 })
 
 const mDTP = dispatch => ({

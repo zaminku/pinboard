@@ -3,8 +3,8 @@ import { updatePin } from "../../actions/pin_actions";
 import { closeModal } from "../../actions/modal_actions";
 import PinEditForm from "./pin_edit_form";
 
-const mSTP = state => ({
-
+const mSTP = (state, ownProps) => ({
+    // pin: state.entities[]
 })
 
 const mDTP = dispatch => ({

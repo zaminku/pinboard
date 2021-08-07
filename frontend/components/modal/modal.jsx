@@ -18,7 +18,8 @@ function Modal({ modal, closeModal }) {
             component = <SignupFormContainer />;
             break;
         case 'editPin':
-            component = <PinEditFormContainer />
+            component = <PinEditFormContainer />;
+            break;
         default:
             return null;
     }
