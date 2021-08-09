@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router';
 
 class PinForm extends React.Component {
     constructor(props) {
@@ -30,7 +31,6 @@ class PinForm extends React.Component {
         }
     }
 
-
     handleSubmit(e) {
         e.preventDefault();
         const pinFormData = new FormData();
@@ -39,7 +39,11 @@ class PinForm extends React.Component {
         if (this.state.photoFile) {
             pinFormData.append('pin[photo]', this.state.photoFile);
         }
-        this.props.createPin(pinFormData);
+
+        this.props.createPin(pinFormData)
+            .then((pin) => {
+                return this.props.history.push(`/pins/${Object.keys(getState().entities.pins)[(Object.keys(getState().entities.pins).length - 1)]}`)
+            });
     }
 
     renderErrors(e) {
@@ -50,6 +54,7 @@ class PinForm extends React.Component {
 
     render() {
         const preview = this.state.photoUrl ? <img className="pin-preview" src={this.state.photoUrl} /> : null;
+
         return(
             <div>
                 <form onSubmit={this.handleSubmit}>

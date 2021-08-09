@@ -1,6 +1,7 @@
 import React from "react";
 import PinIndexItemContainer from "./pin_index_item_container";
 import PinFormContainer from "./pin_form_container";
+import { Link } from "react-router-dom";
 
 class PinIndex extends React.Component {
     constructor(props) {
@@ -9,13 +10,14 @@ class PinIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchPins()
+        // this.props.closeModal()
     }
 
     render () {
         const {pins} = this.props;
         return (
             <div>
-                <PinFormContainer />
+                <Link to="/pins/new">Create a pin!</Link>
                 <br />
                 <ul>
                     {

@@ -1,4 +1,6 @@
 import React from "react";
+import PinEditFormContainer from "./pin_edit_form_container";
+import { Link } from "react-router-dom";
 
 class PinIndexItem extends React.Component {
     constructor(props) {
@@ -6,17 +8,12 @@ class PinIndexItem extends React.Component {
     }
 
     render() {
-        const {pin, currentUserId, openModal} = this.props;
+        const {pin} = this.props;
         return(
             <li>
-                <h1>{pin.title}</h1>
-                <p>{pin.description}</p>
-                <img className="pin-pic" src={pin.photoUrl}/>
-                {
-                    (currentUserId === pin.userId) ? (
-                        <button onClick={() => openModal('editPin')}>Edit this pin</button>
-                    ) : <div></div>
-                }
+                <Link to={`/pins/${pin.id}`}>
+                    <img className="pin-pic" src={pin.photoUrl} />
+                </Link>
             </li>
         )
     }

@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.logout = logout;
     window.signup = signup;
 
-    // test api util
+    // test pin actions
     window.fetchPins = fetchPins;
     window.fetchPin = fetchPin;
     window.createPin = createPin;
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.pin = {
         "id": 20,
         "title": "escalator",
-        "description": "not taking the stairs"
+        "description": "too many stairs"
     }
 
 

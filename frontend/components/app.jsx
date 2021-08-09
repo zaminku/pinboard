@@ -7,8 +7,9 @@ import LoginFormContainer from "./session_form/login_form_container";
 import SignupFormContainer from "./session_form/signup_form_container";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import PinIndexContainer from "./pins/pin_index_container";
-
-
+import PinShowContainer from "./pins/pin_show_container";
+import PinFormContainer from "./pins/pin_form_container"
+import PinEditFormContainer from "./pins/pin_edit_form_container";
 
 const App = () => (
     <div>
@@ -26,8 +27,10 @@ const App = () => (
             </div>
         </header>
 
-        <ProtectedRoute exact path="/" component={PinIndexContainer}></ProtectedRoute>
         <Switch>
+            <ProtectedRoute exact path="/" component={PinIndexContainer} />
+            <ProtectedRoute exact path="/pins/new" component={PinFormContainer} />
+            <ProtectedRoute  path="/pins/:pinId" component={PinShowContainer} />
             {/* <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} /> */}
         </Switch>
