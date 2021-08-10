@@ -134,3 +134,107 @@
 .pin-errors {
     color:#E60023;
 }
+
+/* Pin Edit Form */
+
+.pin-edit-form-contents {
+    width: 540px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+.pin-edit-welcome {
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: rgb(51, 51, 51); 
+    font-weight: 600; 
+    -webkit-font-smoothing: antialiased; 
+    letter-spacing: -1.2px; 
+    word-break: break-word;
+    padding: 0px 20px 0px 20px;
+}
+
+.pin-edit-pic {
+    max-height: 30vh;
+    max-width: 30vh;
+    padding-bottom: 50px;
+    border-radius: 8px;
+}
+
+.pin-edit-form-text {
+    padding: 0px 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pin-title-edit {
+    margin-bottom: 50px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: rgba(198, 198, 198);
+    border-radius: 0;
+    color: rgba(118, 118, 118);
+    font-size: 24px;
+    font-weight: bolder;
+    height: 43px;
+}
+
+.pin-description-edit {
+    margin-bottom: 50px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: rgba(198, 198, 198);
+    font-size: 18px;
+    font-weight: lighter;
+    border-radius: 0;
+}
+
+.pin-pinUrl-edit {
+    margin-bottom: 30px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: rgba(198, 198, 198);
+    font-size: 14px;
+    font-weight: lighter;
+    border-radius: 0;
+}
+
+.pin-edit-footer {
+    display: flex;
+    justify-content: space-between;   
+}
+
+.pin-edit-delete-button, .pin-edit-cancel-button {
+    padding: 8px 12px;
+    background-color: #EFEFEF;
+    color: black;
+    border-color:#EFEFEF;
+    border-style: solid;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.pin-edit-save-button {
+    padding: 8px 12px;
+    background-color: #E60023;
+    border-color:#E60023;
+    border-style: solid;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.pin-edit-footer-right {
+    /* padding: 10px; */
+}

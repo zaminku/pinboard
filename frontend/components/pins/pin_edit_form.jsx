@@ -40,37 +40,53 @@ class PinEditForm extends React.Component {
     }
 
     render() {
-        const {closeModal} = this.props;
+        const {closeModal, pin} = this.props;
         if (pin === "undefined") {
             return null;
         }
         return(
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <div onClick={this.props.closeModal} className="close-x"><span>X</span></div>
-                    <h1>Edit this pin!</h1>
-                    <br />
-                    <label>Title
-                        <input 
-                            type="text"
-                            value = {this.state.title}
-                            placeholder = "Title"
-                            onChange={this.update('title')}
-                        />
-                    </label>
-                    <br />
-                    <label>Description
-                        <input 
-                            type="text"
-                            value = {this.state.description}
-                            placeholder = "Description"
-                            onChange={this.update('description')}
-                        />
-                    </label>
-                    <br />
-                    <button type="submit">Save edits</button>
+                <form className="pin-edit-form-modal" onSubmit={this.handleSubmit}>
+                    <div className="pin-edit-form-contents">
+                        <h1 className="pin-edit-welcome">Edit this Pin</h1>
+                        <img className="pin-edit-pic" src={pin.photoUrl}/>
+
+                        <div className="pin-edit-form-text">
+                            <input 
+                                type="text"
+                                className="pin-title-edit"
+                                value = {this.state.title}
+                                placeholder = "Title"
+                                onChange={this.update('title')}
+                            />
+                            <br />
+                            <input 
+                                type="text"
+                                className="pin-description-edit"
+                                value = {this.state.description}
+                                placeholder = "Description"
+                                onChange={this.update('description')}
+                            />
+                            <br />
+                            <input 
+                                type="text"
+                                className="pin-pinUrl-edit"
+                                value = {this.state.pinUrl}
+                                placeholder = "Add a destination link"
+                                onChange={this.update('pinUrl')}
+                            />
+                            <br />
+                        </div>
+                        <div className="pin-edit-footer">
+                            <button className="pin-edit-delete-button" onClick={this.handleDelete}>Delete</button>
+                            <div className="pin-edit-footer-right">
+                                <button className="pin-edit-cancel-button" onClick={this.props.closeModal}>Cancel</button>
+                                <button className="pin-edit-save-button" type="submit">Save</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </form>
-                <button onClick={this.handleDelete}>Delete this pin</button>
             </div>
         )
     }
