@@ -10,11 +10,9 @@ class PinIndexItem extends React.Component {
     render() {
         const {pin} = this.props;
         return(
-            <li>
-                <Link to={`/pins/${pin.id}`}>
-                    <img className="pin-pic" src={pin.photoUrl} />
-                </Link>
-            </li>
+            <Link className="" to={`/pins/${pin.id}`}>
+                <img className="pin-pic grid-item" src={pin.photoUrl} />
+            </Link>
         )
     }
 }

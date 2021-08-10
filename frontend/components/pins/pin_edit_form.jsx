@@ -44,11 +44,10 @@ class PinEditForm extends React.Component {
 
     render() {
         const {closeModal, pin} = this.props;
-        if (pin === "undefined") {
+        if (pin === undefined) {
             return null;
         }
         
-
         return(
             <div>
                 <form className="pin-edit-form-modal" onSubmit={this.handleSubmit}>

@@ -16,16 +16,16 @@ class PinIndex extends React.Component {
     render () {
         const {pins} = this.props;
         return (
-            <div>
+            <div className="pin-index">
                 <Link to="/pins/new">Create a pin!</Link>
                 <br />
-                <ul>
+                <div className="grid">
                     {
                         pins.map(pin => (
-                            <PinIndexItemContainer pin={pin} key={pin.id} />
+                            <PinIndexItemContainer className="" pin={pin} key={pin.id} />
                         ))
                     }
-                </ul>
+                </div>
             </div>
         )
     }
