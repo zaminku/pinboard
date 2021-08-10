@@ -1,11 +1,12 @@
 import { OPEN_MODAL, CLOSE_MODAL } from "../actions/modal_actions";
 
-const modalReducer = (state = null, action) => {
+const nullModal = { type: null, pinId: null}
+const modalReducer = (state = nullModal, action) => {
     switch (action.type) {
         case OPEN_MODAL:
-            return action.modal
+            return {type: action.modal, pinId: action.pinId}
         case CLOSE_MODAL:
-            return null;
+            return nullModal;
         default:
             return state;
     }

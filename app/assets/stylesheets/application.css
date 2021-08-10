@@ -18,8 +18,18 @@
     font-family: sans-serif;
 }
 
+.logo-div.nav {
+    position: relative;
+    top: 5px;
+    background-color: white;
+}
+
 .top-nav-item {
     display: inline-block;
+}
+
+.logo-title {
+    margin: 12px;
 }
 
 .logo-name.top-nav-item {
@@ -59,12 +69,14 @@
     background-color: #E60023;
     border-color: #E60023;
     color: white;
+    cursor: pointer;
 }
 
 .greeting-button.signup {
     background-color: #EFEFEF;
     border-color: #EFEFEF;
     color: black;
+    cursor: pointer;
 }
 
 .modal-background {
@@ -223,3 +235,9 @@ p.session-form {
 	outline: inherit;
     font-weight: bold;
 }
+
+.header-name {
+    font-size: 20px;
+    margin: 10px 10px 0px 0px;
+}
+

@@ -3,8 +3,9 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
+import PinEditFormContainer from '../pins/pin_edit_form_container';
 
-function Modal({ modal, closeModal }) {
+function Modal({ modal, pinId }) {
     if (!modal) {
         return null;
     }
@@ -15,6 +16,9 @@ function Modal({ modal, closeModal }) {
             break;
         case 'signup':
             component = <SignupFormContainer />;
+            break;
+        case 'editPin':
+            component = <PinEditFormContainer pinId={pinId}/>;
             break;
         default:
             return null;
@@ -30,7 +34,8 @@ function Modal({ modal, closeModal }) {
 
 const mapStateToProps = state => {
     return {
-        modal: state.ui.modal
+        modal: state.ui.modal.type,
+        pinId: state.ui.modal.pinId
     };
 };
 
