@@ -35,7 +35,7 @@
     width: 340px;
     margin-right: 50px;
     background: none;
-    background-color: rgba(239, 239, 239);
+    background-color: rgb(239, 239, 239);
 	color: inherit;
 	border: none;
 	padding: 0;
@@ -82,7 +82,7 @@
     margin-bottom: 100px;
     outline: 0;
     border-width: 0 0 2px;
-    border-color: rgba(198, 198, 198);
+    border-color: rgb(198, 198, 198);
     border-radius: 0;
     color: rgba(118, 118, 118);
     font-size: 32px;
@@ -94,7 +94,7 @@
     margin-bottom: 100px;
     outline: 0;
     border-width: 0 0 2px;
-    border-color: rgba(198, 198, 198);
+    border-color: rgb(198, 198, 198);
     font-size: 18px;
     font-weight: lighter;
     border-radius: 0;
@@ -169,9 +169,9 @@
     margin-bottom: 50px;
     outline: 0;
     border-width: 0 0 2px;
-    border-color: rgba(198, 198, 198);
+    border-color: rgb(198, 198, 198);
     border-radius: 0;
-    color: rgba(118, 118, 118);
+    color: rgb(118, 118, 118);
     font-size: 24px;
     font-weight: bolder;
     height: 43px;
@@ -191,7 +191,7 @@
     margin-bottom: 30px;
     outline: 0;
     border-width: 0 0 2px;
-    border-color: rgba(198, 198, 198);
+    border-color: rgb(198, 198, 198);
     font-size: 14px;
     font-weight: lighter;
     border-radius: 0;
