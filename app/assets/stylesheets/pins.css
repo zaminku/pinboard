@@ -1,0 +1,136 @@
+.pin-pic {
+    max-width: 60vh;
+    max-height: 60vh;
+}
+
+#title {
+    color: red;
+}
+
+#pin-form-container {
+    padding: 50px 0px 2000px 0px;
+    margin: auto;
+    background-color: rgb(239, 239, 239);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pin-form {
+    padding: 40px;
+    width: 880px;
+    height: 640px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.pin-form {
+    display: flex;
+    justify-content: center;
+    padding: 40px 40px 0px;
+    /* padding: 40px 0px 0px 40px;
+    height: 610px;
+    width: 880px;
+    border-radius: 16px; */
+    /* background-color: orange; */
+}
+
+.pin-preview {
+    height: 454px;
+    width: 340px;
+    margin-right: 50px;
+    background: none;
+    background-color: rgba(239, 239, 239);
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	outline: inherit;
+    cursor: pointer;
+    /* font-size: 100%; */
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: dashed; */
+}
+
+.pin-preview-img {
+    max-width: 30vh;
+    max-height: 30vh;
+}
+
+#pin-preview-box {
+    padding-left: 10px;
+    /* background-color: rgba(239, 239, 239); */
+}
+
+.pin-img-input {
+    /* background: none;
+    color: inherit;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    padding: 3px; */
+    /* outline: inherit; */
+    /* max-width: 20vh;
+    max-height: 20vh; */
+}
+
+
+.pin-text-input {
+    padding: 0px 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pin-title-input {
+    margin-bottom: 100px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: rgba(198, 198, 198);
+    border-radius: 0;
+    color: rgba(118, 118, 118);
+    font-size: 32px;
+    font-weight: bolder;
+    height: 43px;
+}
+
+.pin-description-input {
+    margin-bottom: 100px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: rgba(198, 198, 198);
+    font-size: 18px;
+    font-weight: lighter;
+    border-radius: 0;
+}
+
+.pin-pinUrl-input {
+    margin-bottom: 80px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: rgba(198, 198, 198);
+    font-size: 18px;
+    font-weight: lighter;
+    border-radius: 0;
+}
+
+.pin-submit {
+    background-color: rgb(230, 0, 35); 
+    border: none; cursor: pointer; 
+    flex: 0 0 auto; 
+    height: 40px; 
+    outline: 0px; 
+    padding: 0px 14px; 
+    border-radius: 0px 8px 8px 0px; 
+    pointer-events: auto;
+    color: white;
+    font-size: 20px;
+    top: 10px;
+}
+
+.pin-errors {
+    color:#E60023;
+}

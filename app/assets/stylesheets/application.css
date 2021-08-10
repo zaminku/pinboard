@@ -21,6 +21,7 @@
 .logo-div.nav {
     position: relative;
     top: 5px;
+    background-color: white;
 }
 
 .top-nav-item {
@@ -238,12 +239,3 @@ p.session-form {
     margin: 10px 10px 0px 0px;
 }
 
-.pin-preview {
-    max-width: 20vh;
-    max-height: 20vh;
-}
-
-.pin-pic {
-    max-width: 60vh;
-    max-height: 60vh;
-}

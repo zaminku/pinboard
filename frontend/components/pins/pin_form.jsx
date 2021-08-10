@@ -7,6 +7,7 @@ class PinForm extends React.Component {
         this.state = {
             title: "",
             description: "",
+            pinUrl: "",
             photoFile: null,
             photoUrl: null
         }
@@ -36,6 +37,7 @@ class PinForm extends React.Component {
         const pinFormData = new FormData();
         pinFormData.append('pin[title]', this.state.title);
         pinFormData.append('pin[description]', this.state.description);
+        pinFormData.append('pin[pinUrl]', this.state.pinUrl);
         if (this.state.photoFile) {
             pinFormData.append('pin[photo]', this.state.photoFile);
         }
@@ -48,45 +50,63 @@ class PinForm extends React.Component {
 
     renderErrors(e) {
         if (this.props.errors) {
-            return (<div>{this.props.errors[0]}</div>)
+            return (<div className="pin-errors">{this.props.errors[0]}</div>)
         }
     }
 
     render() {
-        const preview = this.state.photoUrl ? <img className="pin-preview" src={this.state.photoUrl} /> : null;
+        const preview = this.state.photoUrl ? 
+            <img className="pin-preview-img" src={this.state.photoUrl} /> : 
+            <input
+                type="file"
+                className="pin-preview"
+                onChange={this.handleFile}
+            />;
 
         return(
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <h3>Add a pin</h3>
-                    <label>Title
-                        <input 
-                            type="text" 
-                            value={this.state.title}
-                            onChange={this.update('title')}
-                            placeholder="Add your title"
-                        />
-                    </label>
-                    <br />
-                    <label>Description
-                        <input 
-                            type="text" 
-                            value={this.state.description}
-                            onChange={this.update('description')}
-                            placeholder="Tell everyone what your Pin is about"
-                        />
-                    </label>
-                    <br />
-                    <input 
-                        type="file" 
-                        onChange={this.handleFile}
-                    />
-                    <br />
-                    <h3>Image preview:</h3>
-                    {preview}
-                    <input type="submit" value="Save pin!"/>
-                </form>
-                {this.renderErrors()}
+            <div id="pin-form-container">
+                <div id="pin-form">
+                    <form className="pin-form" onSubmit={this.handleSubmit}>
+                        <div id="pin-preview-box">
+                            {preview}
+                            <br />
+                            {/* <input
+                                type="file"
+                                className="pin-img-input"
+                                onChange={this.handleFile}
+                            /> */}
+                        </div>
+
+                        <div className="pin-text-input">
+                            <input
+                                type="text"
+                                value={this.state.title}
+                                onChange={this.update('title')}
+                                placeholder="Add your title"
+                                className="pin-title-input"
+                            />
+                            <input 
+                                type="text" 
+                                value={this.state.description}
+                                onChange={this.update('description')}
+                                placeholder="Tell everyone what your Pin is about"
+                                className="pin-description-input"
+                            />
+                            <input 
+                                type="text" 
+                                value={this.state.pinUrl}
+                                onChange={this.update('pinUrl')}
+                                placeholder="Add a destination link"
+                                className="pin-pinUrl-input"
+                            />
+
+                            <br />
+                            {this.renderErrors()}
+                            <br />
+                            <input type="submit" value="Save" className="pin-submit" />
+                        </div>
+                    </form>
+                </div>
             </div>
         )
     }
