@@ -22,6 +22,10 @@ class PinEditForm extends React.Component {
         this.props.fetchPin(this.props.pinId);
     }
 
+    componentWillUnMount() {
+        this.props.closeModal();
+    }
+
     update(field) {
         return e => this.setState({[field]: e.currentTarget.value});
     }
@@ -35,7 +39,6 @@ class PinEditForm extends React.Component {
     handleDelete(e) {
         e.preventDefault();
         this.props.deletePin(this.props.pinId)
-            .then(() => this.props.closeModal())
             .then(() => this.props.history.push('/'))
     }
 
@@ -44,12 +47,14 @@ class PinEditForm extends React.Component {
         if (pin === "undefined") {
             return null;
         }
+        
+
         return(
             <div>
                 <form className="pin-edit-form-modal" onSubmit={this.handleSubmit}>
                     <div className="pin-edit-form-contents">
                         <h1 className="pin-edit-welcome">Edit this Pin</h1>
-                        <img className="pin-edit-pic" src={pin.photoUrl}/>
+                        <img className="pin-edit-pic" src={pin.photoUrl} />
 
                         <div className="pin-edit-form-text">
                             <input 

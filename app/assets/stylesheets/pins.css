@@ -145,11 +145,10 @@
 }
 
 .pin-edit-welcome {
-    font-size: 30px;
-    font-family: 'Inter', sans-serif;
     text-align: center;
     margin-bottom: 30px;
     font-family: 'Inter', sans-serif;
+    font-size: 30px;
     font-weight: bold;
     color: rgb(51, 51, 51); 
     font-weight: 600; 
@@ -235,6 +234,70 @@
     margin-left: 10px;
 }
 
-.pin-edit-footer-right {
-    /* padding: 10px; */
+/* Pin Show */
+.pin-show {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.pin-show-homepage {
+    margin-right: 40px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.pin-show-box {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 120px;
+    /* width: 880px;
+    height: 640px; */
+    background-color: white;
+    border-radius: 32px;
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.pin-show-pic {
+    margin-right: 20px;
+    max-width: 50vh;
+    max-height: 50vh;
+    border-radius: 32px;
+}
+
+.pic-show-info {
+    width: 300px;
+}
+
+.pin-show-edit-button {
+    margin-bottom: 40px;
+    border-radius: 100px;
+    
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+}
+
+.pin-show-edit-button:hover {
+    /* background-color: rgba(226, 226, 226); */
+    /* padding: 16px; */
+}
+
+.pin-show-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.pin-show-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
 }

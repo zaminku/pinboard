@@ -69,12 +69,14 @@
     background-color: #E60023;
     border-color: #E60023;
     color: white;
+    cursor: pointer;
 }
 
 .greeting-button.signup {
     background-color: #EFEFEF;
     border-color: #EFEFEF;
     color: black;
+    cursor: pointer;
 }
 
 .modal-background {

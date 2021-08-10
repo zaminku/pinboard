@@ -22,20 +22,28 @@ class PinShow extends React.Component {
         }
 
         return(
-            <div>
-                <Link to="/">Home page</Link>
-                <h1>{pin.title}</h1>
-                <p>{pin.description}</p>
-                <img className="pin-pic" src={pin.photoUrl} />
+            <div className="pin-show">
+                <div className="pin-show-homepage">
+                    <Link to="/">Home page</Link>
+                </div>
 
-                {
-                    (currentUserId === pin.userId) ? (
-                        <div>
-                            {/* <PinEditFormContainer pin={pin} /> */}
-                            <button onClick={() => openModal('editPin', pinId)}>Edit this pin</button>
-                        </div>
-                    ) : <div></div>
-                }
+                <div className="pin-show-box">
+                    <img className="pin-show-pic" src={pin.photoUrl} />
+                    <div className="pin-show-info">
+                        {
+                            (currentUserId === pin.userId) ? (
+                                <div>
+                                    {/* <PinEditFormContainer pin={pin} /> */}
+                                    <button className="pin-show-edit-button" onClick={() => openModal('editPin', pinId)}>    ...    </button>
+                                </div>
+                            ) : <div></div>
+                        }
+                        <h1 className="pin-show-title">{pin.title}</h1>
+                        <p className="pin-show-description">{pin.description}</p>
+                        <a href={pin.pinUrl}>Link</a>
+                    </div>
+                </div>
+
             </div>
         )
     }
