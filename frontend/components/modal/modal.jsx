@@ -5,8 +5,9 @@ import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import PinEditFormContainer from '../pins/pin_edit_form_container';
 import BoardFormContainer from '../boards/board_form_container';
+import BoardEditFormContainer from '../boards/board_edit_form_container';
 
-function Modal({ modal, pinId }) {
+function Modal({ modal, itemId }) {
     if (!modal) {
         return null;
     }
@@ -19,10 +20,13 @@ function Modal({ modal, pinId }) {
             component = <SignupFormContainer />;
             break;
         case 'editPin':
-            component = <PinEditFormContainer pinId={pinId}/>;
+            component = <PinEditFormContainer pinId={itemId}/>;
             break;
         case 'createBoard':
             component = <BoardFormContainer />;
+            break;
+        case 'editBoard':
+            component = <BoardEditFormContainer boardId={itemId}/>
             break;
         default:
             return null;
@@ -39,7 +43,7 @@ function Modal({ modal, pinId }) {
 const mapStateToProps = state => {
     return {
         modal: state.ui.modal.type,
-        pinId: state.ui.modal.pinId
+        itemId: state.ui.modal.itemId
     };
 };
 

@@ -1,25 +1,22 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 
-
-class PinEditForm extends React.Component {
+class BoardEditForm extends React.Component {
     constructor(props) {
         super(props);
-        const pin = this.props.pin
+        const board = this.props.board;
         this.state = {
-            id: this.props.pinId,
-            title: pin.title,
-            description: pin.description,
-            pinUrl: pin.pinUrl
+            id: this.props.boardId,
+            name: board.name,
+            description: board.description
         }
-        
+
         this.handleDelete = this.handleDelete.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount() {
-        this.props.fetchPin(this.props.pinId);
+        this.props.fetchBoard(this.props.boardId);
     }
 
     componentWillUnmount() {
@@ -30,54 +27,50 @@ class PinEditForm extends React.Component {
         return e => this.setState({[field]: e.currentTarget.value});
     }
 
+    renderErrors(e) {
+        if (this.props.errors) {
+            return (<div className="board-edit-errors">{this.props.errors[0]}</div>)
+        }
+    }
+
     handleSubmit(e) {
         e.preventDefault();
-        this.props.updatePin(this.state)
+        this.props.updateBoard(this.state)
             .then(() => this.props.closeModal())
     }
 
     handleDelete(e) {
         e.preventDefault();
-        this.props.deletePin(this.props.pinId)
+        this.props.deleteBoard(this.props.boardId)
             .then(() => this.props.history.push('/'))
     }
 
     render() {
-        const {closeModal, pin} = this.props;
-        if (pin === undefined) {
+        const {closeModal, board} = this.props;
+        if (board === undefined) {
             return null;
         }
-        
-        return(
+        return (
             <div>
                 <form className="pin-edit-form-modal" onSubmit={this.handleSubmit}>
                     <div className="pin-edit-form-contents">
-                        <h1 className="pin-edit-welcome">Edit this Pin</h1>
-                        <img className="pin-edit-pic" src={pin.photoUrl} />
+                        <h1 className="pin-edit-welcome">Edit your Board</h1>
 
                         <div className="pin-edit-form-text">
-                            <input 
+                            <input
                                 type="text"
                                 className="pin-title-edit"
-                                value = {this.state.title}
-                                placeholder = "Title"
-                                onChange={this.update('title')}
+                                value={this.state.name}
+                                placeholder="Name"
+                                onChange={this.update('name')}
                             />
                             <br />
-                            <input 
+                            <input
                                 type="text"
                                 className="pin-description-edit"
-                                value = {this.state.description}
-                                placeholder = "Description"
+                                value={this.state.description}
+                                placeholder="Description"
                                 onChange={this.update('description')}
-                            />
-                            <br />
-                            <input 
-                                type="text"
-                                className="pin-pinUrl-edit"
-                                value = {this.state.pinUrl}
-                                placeholder = "Add a destination link"
-                                onChange={this.update('pinUrl')}
                             />
                             <br />
                         </div>
@@ -96,4 +89,4 @@ class PinEditForm extends React.Component {
     }
 }
 
-export default withRouter(PinEditForm);
+export default BoardEditForm;

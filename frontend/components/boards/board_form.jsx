@@ -23,13 +23,19 @@ class BoardForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.createBoard(this.state)
-            .then(() => this.props.closeModal());
+            // .then(() => this.props.closeModal());
+            .then((board) => {
+                return this.props.history.push(`/boards/${Object.keys(this.props.boards)[(Object.keys(this.props.boards).length - 1)]}`)
+            });
     }
 
     renderErrors(e) {
         if (this.props.errors[0]) {
-            // return (<div className="board-errors">{this.props.errors[0]}</div>)
-            return (<div className="board-errors">Don't forget to name your board!</div>)
+            if (this.props.errors[0] === "Name can't be blank") {
+                return (<div className="board-errors">Don't forget to name your board!</div>)
+            } else {
+                return (<div className="board-errors">{this.props.errors[0]}</div>)
+            }
         }
     }
 

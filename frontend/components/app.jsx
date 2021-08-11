@@ -10,6 +10,8 @@ import PinIndexContainer from "./pins/pin_index_container";
 import PinShowContainer from "./pins/pin_show_container";
 import PinFormContainer from "./pins/pin_form_container"
 import PinEditFormContainer from "./pins/pin_edit_form_container";
+import BoardShowContainer from "./boards/board_show_container";
+import BoardIndexContainer from "./boards/board_index_container";
 
 const App = () => (
     <div>
@@ -31,6 +33,8 @@ const App = () => (
             <ProtectedRoute exact path="/" component={PinIndexContainer} />
             <ProtectedRoute exact path="/pins/new" component={PinFormContainer} />
             <ProtectedRoute  path="/pins/:pinId" component={PinShowContainer} />
+            <ProtectedRoute  path="/boards/:boardId" component={BoardShowContainer} />
+            <ProtectedRoute  exact path="/boards/" component={BoardIndexContainer} />
             {/* <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} /> */}
         </Switch>

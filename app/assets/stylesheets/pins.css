@@ -300,11 +300,11 @@
 } */
 
 .pin-pic {
-    width: 15vw;
+    width: 13vw;
     max-height: 30vh;
-    border-radius: 20px;
+    border-radius: 17px;
     background-color: white;
-    padding: 10px;
+    padding: 10px 5px 10px;
 }
 
 .grid {

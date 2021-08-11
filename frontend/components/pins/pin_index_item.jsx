@@ -1,5 +1,4 @@
 import React from "react";
-import PinEditFormContainer from "./pin_edit_form_container";
 import { Link } from "react-router-dom";
 
 class PinIndexItem extends React.Component {
