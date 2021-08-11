@@ -5,6 +5,7 @@ import Root from "./components/root"
 
 import {login, logout, signup} from "./actions/session_actions"
 import {fetchPins, fetchPin, createPin, updatePin, deletePin} from "./actions/pin_actions"
+import {fetchBoards, fetchBoard, createBoard, updateBoard, deleteBoard} from "./actions/board_actions"
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -34,6 +35,13 @@ document.addEventListener("DOMContentLoaded", () => {
     window.createPin = createPin;
     window.updatePin = updatePin;
     window.deletePin = deletePin;
+
+    // test board util
+    window.fetchBoards = fetchBoards;
+    window.fetchBoard = fetchBoard;
+    window.createBoard = createBoard;
+    window.updateBoard = updateBoard;
+    window.deleteBoard = deleteBoard;
     
     // const store = configureStore();
     window.getState = store.getState;
@@ -45,6 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
         "id": 20,
         "title": "escalator",
         "description": "too many stairs"
+    }
+
+    window.board = {
+        "user_id": 4,
+        "name": "travel",
+        "description": "places where I would like to travel"
     }
 
 

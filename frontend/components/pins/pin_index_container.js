@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import PinIndex from "./pin_index";
 import { fetchPins } from "../../actions/pin_actions"
-import { closeModal } from "../../actions/modal_actions";
+import { openModal, closeModal } from "../../actions/modal_actions";
 
 const mSTP = ({entities}) => ({
     pins: Object.values(entities.pins)
@@ -9,6 +9,7 @@ const mSTP = ({entities}) => ({
 
 const mDTP = dispatch => ({
     fetchPins: () => dispatch(fetchPins()),
+    openModal: (type) => dispatch(openModal(type)),
     closeModal: () => dispatch(closeModal())
 })
 
