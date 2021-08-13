@@ -42,7 +42,9 @@ class PinShow extends React.Component {
                             }
                             <h1 className="pin-show-title">{pin.title}</h1>
                             <p className="pin-show-description">{pin.description}</p>
-                            <a href={pin.pinUrl}>Link</a>
+                            {
+                                // (pin.pinUrl !== undefined) ? (<a href={pin.pinUrl}>Link</a>) : (<div></div>)
+                            }
                         </div>
                     </div>
 
