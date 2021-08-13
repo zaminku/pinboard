@@ -1,7 +1,7 @@
 # [Pinboard](https://pinboard-zamin.herokuapp.com/#/)
 [Visit Pinboard Here!](https://pinboard-zamin.herokuapp.com/#/)
 
-Pinboard is a full-stack Pinterest clone, which allows for users to view and organize pictures, also known as pins. Users can upload and view all pins on the site. Using boards, users can catalog their pins which they can stem ideas from. This project was constructed with a Ruby on Rails backend and a React/Redux frontend.
+Pinboard is a full-stack Pinterest clone, which allows for users to view and organize pictures, known as pins. Users can upload and view all pins on the site. Using boards, users can catalog their pins which they can stem ideas from. This project was constructed with a Ruby on Rails backend and a React/Redux frontend.
 
 ## Technologies
 - Ruby on Rails
