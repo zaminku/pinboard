@@ -18,7 +18,7 @@ class BoardIndexItem extends React.Component {
                                     <Link to={`/boards/${board.id}`}>{board.name}</Link>
                                 </li>
                                     {
-                                        (board.description) ?  (<li>{board.description}</li>) : (<div></div>)
+                                        // (board.description) ?  (<li>{board.description}</li>) : (<div></div>)
                                     }
                             </div>
                         ) : (<div></div>)

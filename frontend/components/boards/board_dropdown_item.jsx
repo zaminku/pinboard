@@ -23,10 +23,10 @@ class BoardDropdownItem extends React.Component {
                     (currentUserId === board.userId) ?
                         (
                             <div>
-                                <li onClick={this.saveToBoard}>
+                                <button onClick={this.saveToBoard}>
                                     {board.name}
                                     {/* <Link to={`/boards/${board.id}`}>{board.name}</Link> */}
-                                </li>
+                                </button>
                             </div>
                         ) : (<div></div>)
                 }

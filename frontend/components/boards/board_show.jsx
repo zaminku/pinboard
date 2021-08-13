@@ -26,14 +26,14 @@ class BoardShow extends React.Component {
         return (
             <div className="board-show">
                 <div className="board-show-homepage">
-                    <Link to="/">Home page</Link>
+                    <Link to="/"><button>Home page</button></Link>
                 </div>
 
                 <div className="board-show-box">
-                    <h1>{board.name}</h1>
+                    <h1 className="board-title">{board.name}</h1>
                     {
                         (currentUserId === board.userId) ? (
-                            <div>
+                            <div className="board-show-edit-button-div" >
                                 <button className="board-show-edit-button" onClick={() => openModal('editBoard', boardId)}>Edit board</button>
                             </div>
                         ) : <div></div>

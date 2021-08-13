@@ -14,7 +14,7 @@ class BoardDropdown extends React.Component {
         const { boards } = this.props;
         return (
             <div>
-                <h1>All your boards!</h1>
+                <h1>Add this pin to a board!</h1>
                 <div className="boards-index">
                     {
                         boards.map(board => (

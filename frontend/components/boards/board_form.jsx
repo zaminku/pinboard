@@ -42,21 +42,26 @@ class BoardForm extends React.Component {
     render() {
         return(
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <h1>Create board</h1>
-                    <label>Name
-                        <input 
-                            type="text"
-                            value={this.state.name}
-                            placeholder='Like "Places to Go" or "Recipes to Make"'
-                            onChange={this.update("name")}
-                        />
-                    </label>
+                <form className="pin-edit-form-contents" onSubmit={this.handleSubmit}>
+                    <h1 className="pin-edit-welcome">Create board</h1>
+                    <div className="pin-edit-form-text">
+                        <label className="board-form-label"> {/*Name*/}
+                            <br />
+                            <input 
+                                type="text"
+                                className="email session-input"
+                                value={this.state.name}
+                                placeholder='Like "Places to Go" or "Recipes to Make"'
+                                onChange={this.update("name")}
+                            />
+                        </label>
+                    </div>
                     {this.renderErrors()}
                     <br />
-
-                    <button onClick={this.props.closeModal}>X</button>
-                    <button type="submit">Create</button>
+                    <div className="pin-edit-footer">
+                        <button className="pin-edit-cancel-button" onClick={this.props.closeModal}>Cancel</button>
+                        <button className="pin-edit-save-button" type="submit">Create</button>
+                    </div>
                 </form>
             </div>
         )

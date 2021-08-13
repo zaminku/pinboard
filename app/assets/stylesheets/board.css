@@ -1,0 +1,15 @@
+/* .board-form-label {
+    text-align: left;
+} */
+
+.board-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.board-show-edit-button-div {
+    display: flex;
+    justify-content: center;
+}

@@ -26,7 +26,7 @@ class PinShow extends React.Component {
             <div>
                 <div className="pin-show">
                     <div className="pin-show-homepage">
-                        <Link to="/">Home page</Link>
+                        <Link to="/"><button>Home page</button></Link>
                     </div>
 
                     <div className="pin-show-box">
