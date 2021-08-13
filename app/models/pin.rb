@@ -18,12 +18,20 @@ class Pin < ApplicationRecord
     validates :user_id, :title, presence: true
     validates :description, allow_blank: true, length: {maximum: 500}
     validate :ensure_photo
+    has_one_attached :photo
 
     belongs_to :user,
         foreign_key: :user_id,
         class_name: :User
 
-    has_one_attached :photo
+    has_many :boards_pins,
+        foreign_key: :pin_id,
+        class_name: :BoardsPin,
+        dependent: :destroy
+    
+    has_many :boards,
+        through: :boards_pins
+
 
     def ensure_photo
         unless self.photo.attached?

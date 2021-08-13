@@ -34,6 +34,14 @@ class User < ApplicationRecord
         foreign_key: :user_id,
         class_name: :Pin
 
+    has_many :boards,
+        foreign_key: :user_id,
+        class_name: :Board
+
+    has_many :liked_pins,
+        through: :boards,
+        source: :pins
+
     def self.generate_session_token
         SecureRandom.urlsafe_base64
     end

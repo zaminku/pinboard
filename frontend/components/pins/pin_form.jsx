@@ -44,7 +44,7 @@ class PinForm extends React.Component {
 
         this.props.createPin(pinFormData)
             .then((pin) => {
-                return this.props.history.push(`/pins/${Object.keys(getState().entities.pins)[(Object.keys(getState().entities.pins).length - 1)]}`)
+                return this.props.history.push(`/pins/${Object.keys(this.props.pins)[(Object.keys(this.props.pins).length - 1)]}`)
             });
     }
 

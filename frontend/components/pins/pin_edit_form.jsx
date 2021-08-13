@@ -1,6 +1,6 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
-import { withRouter } from "react-router";
+import { withRouter } from "react-router-dom";
 
 
 class PinEditForm extends React.Component {
@@ -22,7 +22,7 @@ class PinEditForm extends React.Component {
         this.props.fetchPin(this.props.pinId);
     }
 
-    componentWillUnMount() {
+    componentWillUnmount() {
         this.props.closeModal();
     }
 

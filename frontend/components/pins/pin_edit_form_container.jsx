@@ -4,8 +4,8 @@ import { closeModal } from "../../actions/modal_actions";
 import PinEditForm from "./pin_edit_form";
 
 const mSTP = (state, ownProps) => ({
-    pinId: state.ui.modal.pinId,
-    pin: state.entities.pins[state.ui.modal.pinId],
+    pinId: state.ui.modal.itemId,
+    pin: state.entities.pins[state.ui.modal.itemId],
     history: ownProps.history
 })
 
