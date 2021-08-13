@@ -59,3 +59,5 @@ export const deletePin = pinId => dispatch => (
         .then(() => dispatch(removePin(pinId)),
             err => dispatch(receivePinErrors(err.responseJSON)))
 )
+
+

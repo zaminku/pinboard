@@ -6,6 +6,7 @@ import Root from "./components/root"
 import {login, logout, signup} from "./actions/session_actions"
 import {fetchPins, fetchPin, createPin, updatePin, deletePin} from "./actions/pin_actions"
 import {fetchBoards, fetchBoard, createBoard, updateBoard, deleteBoard} from "./actions/board_actions"
+import {savePinToBoard} from "./util/boards_pin_api_util";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -36,12 +37,15 @@ document.addEventListener("DOMContentLoaded", () => {
     window.updatePin = updatePin;
     window.deletePin = deletePin;
 
-    // test board util
+    // test board actions
     window.fetchBoards = fetchBoards;
     window.fetchBoard = fetchBoard;
     window.createBoard = createBoard;
     window.updateBoard = updateBoard;
     window.deleteBoard = deleteBoard;
+
+    // test boardspin util
+    window.savePinToBoard = savePinToBoard;
     
     // const store = configureStore();
     window.getState = store.getState;

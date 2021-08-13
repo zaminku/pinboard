@@ -21,4 +21,13 @@ class Board < ApplicationRecord
         foreign_key: :user_id,
         class_name: :User
 
-end
+    has_many :boards_pins,
+        foreign_key: :board_id,
+        class_name: :BoardsPin,
+        dependent: :destroy
+    
+    has_many :pins,
+        through: :boards_pins,
+        source: :pin
+    end
+    

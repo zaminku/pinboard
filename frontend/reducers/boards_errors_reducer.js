@@ -1,4 +1,4 @@
-import { RECEIVE_BOARD_ERRORS, CLEAR_BOARD_ERRORS,RECEIVE_BOARD, RECEIVE_BOARDS  } from "../actions/board_actions";
+import { RECEIVE_BOARD_ERRORS, CLEAR_BOARD_ERRORS, RECEIVE_BOARD, RECEIVE_BOARDS  } from "../actions/board_actions";
 
 const boardsErrorsReducer = (state = [], action) => {
     Object.freeze(state);

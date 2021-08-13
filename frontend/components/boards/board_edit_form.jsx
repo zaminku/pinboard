@@ -89,4 +89,4 @@ class BoardEditForm extends React.Component {
     }
 }
 
-export default BoardEditForm;
+export default withRouter(BoardEditForm);

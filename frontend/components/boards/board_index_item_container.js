@@ -7,6 +7,7 @@ const mSTP = ({entities, session}, ownProps) => ({
 })
 
 const mDTP = dispatch => ({
+    fetchPins: () => dispatch(fetchPins()),
     openModal: (type) => dispatch(openModal(type))
 })
 

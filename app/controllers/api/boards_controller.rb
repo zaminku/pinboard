@@ -10,7 +10,7 @@ class Api::BoardsController < ApplicationController
             render "api/boards/show"
         else
             render json: @board.errors.full_messages, status: 422
-        end 
+        end
     end
     
     def update

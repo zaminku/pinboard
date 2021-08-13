@@ -1,6 +1,7 @@
 import React from "react";
 import pin_edit_form from "../pins/pin_edit_form";
 import { Link } from "react-router-dom";
+import PinIndexItemContainer from "../pins/pin_index_item_container";
 
 class BoardShow extends React.Component {
     constructor(props) {
@@ -17,7 +18,7 @@ class BoardShow extends React.Component {
     }
 
     render() {
-        const {board, boardId, currentUserId, openModal} = this.props;
+        const {board, boardId, pins, currentUserId, openModal} = this.props;
         if (board === undefined) {
             return null;
         }
@@ -36,6 +37,12 @@ class BoardShow extends React.Component {
                                 <button className="board-show-edit-button" onClick={() => openModal('editBoard', boardId)}>Edit board</button>
                             </div>
                         ) : <div></div>
+                    }
+                    <br />
+                    {
+                        pins.map(pin => (
+                            <PinIndexItemContainer className="" pin={pin} key={pin.id} />
+                        ))
                     }
                 </div>
             </div>
