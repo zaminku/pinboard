@@ -1,24 +1,27 @@
-# README
+# [Pinboard](https://pinboard-zamin.herokuapp.com/#/)
+[Visit Pinboard Here!](https://pinboard-zamin.herokuapp.com/#/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Pinboard is a full-stack Pinterest clone, which allows for users to view and organize pictures, known as pins. Users can upload and view all pins on the site. Using boards, users can catalog their pins which they can stem ideas from. This project was constructed with a Ruby on Rails backend and a React/Redux frontend.
 
-Things you may want to cover:
+## Technologies
+- Ruby on Rails
+- React/Redux
+- HTML/CSS
+- Webpack
+- PostgreSQL
+- AWS S3
 
-* Ruby version
+## Features
+### Pins
+- Users can view an assortment of pins from all users of Pinboard
+- Users can update and delete their own uploaded pins
 
-* System dependencies
+### Boards
+- Boards are used to organize pins in whichever way the user chooses to
+- Users can only add pins to their own created boards
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Future Work
+- Users Profile
+- Following Users
+- Comments
+- Shuffled pins
