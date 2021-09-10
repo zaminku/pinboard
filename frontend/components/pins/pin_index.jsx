@@ -17,7 +17,7 @@ class PinIndex extends React.Component {
         const {pins} = this.props;
         return (
             <div className="pin-index">
-                <Link to="/pins/new"><button>Create a pin!</button></Link>
+                <Link to="/pins/new"><button className="create-pin-btn">+</button></Link>
                 <button onClick={() => this.props.openModal("createBoard")}>Create a board!</button>
                 <Link to="/boards"><button>My boards</button></Link>
                 <br />
