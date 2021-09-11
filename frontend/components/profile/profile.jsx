@@ -12,8 +12,11 @@ class Profile extends React.Component {
         const {currentUser, openModal} = this.props;
         return(
             <div>
-                <i className="fas fa-user"></i>
-                <h1 className="profile-name">{currentUser.firstName} {currentUser.lastName}</h1>
+                <Link to="/pins/new"><button className="create-pin-btn">+</button></Link>
+                <div className="profile-user">
+                    <div className="profile-pic-div"><i className="fas fa-user"></i></div>
+                    <h1 className="profile-name">{currentUser.firstName} {currentUser.lastName}</h1>
+                </div>
 
                 <BoardIndexContainer />
 

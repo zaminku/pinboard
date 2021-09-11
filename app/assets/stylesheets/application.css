@@ -241,3 +241,35 @@ p.session-form {
     margin: 10px 10px 0px 0px;
 }
 
+.navbar-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.navbar-links > * {
+    /* padding: 10px; */
+    cursor: pointer;
+}
+
+.user:hover {
+    border-radius: 50%;
+}
+
+.logout {
+    background-color: #EFEFEF;
+    border-color: #EFEFEF;
+    color: black;
+    cursor: pointer;
+}
+
+.navbar-icon {
+    padding: 10px;
+}
+
+.navbar-icon:hover {
+    background-color: gray;
+    border-radius: 50%;
+}
+
