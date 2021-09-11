@@ -253,6 +253,10 @@ p.session-form {
     cursor: pointer;
 }
 
+.navbar-links > * > * {
+    color: rgb(117, 117, 117);
+}
+
 .user:hover {
     border-radius: 50%;
 }
@@ -269,7 +273,7 @@ p.session-form {
 }
 
 .navbar-icon:hover {
-    background-color: gray;
+    background-color: rgb(240, 240, 240);
     border-radius: 50%;
 }
 
