@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router';
-// comment here
+
 class PinForm extends React.Component {
     constructor(props) {
         super(props);
