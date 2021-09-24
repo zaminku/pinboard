@@ -15,7 +15,7 @@ class PinForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
     }
-//comment
+
     update(field) {
         return e => this.setState({[field]: e.currentTarget.value})
     }
