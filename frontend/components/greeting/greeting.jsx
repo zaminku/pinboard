@@ -17,9 +17,9 @@ const Greeting = ({currentUser, logout, openModal}) => {
     const personalGreeting = () => (
         <hgroup className="header-group">
             <div className="navbar-links">
-                <a href="https://www.linkedin.com/in/zamin-k/" target="_blank"><i class="navbar-icon fab fa-linkedin"></i></a>
-                <a href="https://github.com/zaminku" target="_blank"><i class="navbar-icon fab fa-github"></i></a>
-                <Link to={`/profile/${currentUser.id}`}><i class="navbar-icon user fas fa-user"></i></Link>
+                <a href="https://www.linkedin.com/in/zamin-k/" target="_blank"><i className="navbar-icon fab fa-linkedin"></i></a>
+                <a href="https://github.com/zaminku" target="_blank"><i className="navbar-icon fab fa-github"></i></a>
+                <Link to={`/profile/${currentUser.id}`}><i className="navbar-icon user fas fa-user"></i></Link>
                 <button className="greeting-button logout" onClick={logout}>Log out</button>
             </div>
         </hgroup>

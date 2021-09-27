@@ -16,6 +16,7 @@ class Profile extends React.Component {
                 <div className="profile-user">
                     <div className="profile-pic-div"><i className="fas fa-user"></i></div>
                     <h1 className="profile-name">{currentUser.firstName} {currentUser.lastName}</h1>
+                    <p>{currentUser.bio}</p>
                 </div>
 
                 <BoardIndexContainer />
