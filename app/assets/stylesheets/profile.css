@@ -21,6 +21,7 @@
 
 .profile-hr {
     color: rgb(220, 220, 220);
+    border: 1px solid;
 }
 
 .profile-name {
