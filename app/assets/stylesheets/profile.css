@@ -24,7 +24,15 @@
 }
 
 .profile-name {
-    font-size: 28px;
+    font-size: 36px;
+    font-weight: 600;
     color: rgb(23, 23, 23);
     margin-top: 10px;
+    -webkit-font-smoothing: antialiased; 
+    letter-spacing: -1.2px; 
+    word-break: break-word;
+}
+
+.profile-user > * {
+    margin: 5px;
 }

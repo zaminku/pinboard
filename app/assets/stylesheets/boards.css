@@ -22,16 +22,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
 }
 
 .board-box-link {
-    text-decoration: none;
     color: black;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.board-box-item {
+    color: black;
+    margin-right: 10px;
+    text-decoration: none;
 }
 
 .boards-index {
     display: flex;
     flex-direction: row;
-    margin: 10px;
+    margin: 5px;
 }

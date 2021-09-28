@@ -13,7 +13,7 @@ class BoardIndexItem extends React.Component {
                 {
                     (currentUserId === board.userId) ? 
                         (
-                            <div>
+                            <div className="board-box-item">
                                 <Link className="board-box-link" to={`/boards/${board.id}`}>
                                     <div className="board-box">{board.name}</div>
                                     {board.name}
