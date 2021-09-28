@@ -17,7 +17,8 @@
 .board-box {
     width: 200px;
     height: 200px;
-    border: 1px black solid;
+    /* border: 1px black solid; */
+    background-color: rgb(239, 238, 239);
     border-radius: 12px;
     display: flex;
     justify-content: center;

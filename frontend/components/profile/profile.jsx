@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom";
 import BoardIndexContainer from "../boards/board_index_container"
+import UserPinIndexContainer from "./user_pin_index_container";
 
 class Profile extends React.Component {
     constructor(props) {
@@ -8,11 +9,16 @@ class Profile extends React.Component {
         
     }
 
+    componentDidMount() {
+        this.props.fetchPins();
+    }
+
     render() {
         const {currentUser, openModal} = this.props;
         if (currentUser === undefined) {
             return null;
         }
+
 
         return(
             <div>
@@ -27,6 +33,7 @@ class Profile extends React.Component {
                 <BoardIndexContainer />
                 <hr className="profile-hr"/>
 
+                <UserPinIndexContainer />
             </div>
         )
     }
