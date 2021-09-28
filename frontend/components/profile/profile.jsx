@@ -10,6 +10,10 @@ class Profile extends React.Component {
 
     render() {
         const {currentUser, openModal} = this.props;
+        if (currentUser === undefined) {
+            return null;
+        }
+
         return(
             <div>
                 <Link to="/pins/new"><button className="create-pin-btn">+</button></Link>

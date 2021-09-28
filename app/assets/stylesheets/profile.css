@@ -24,5 +24,7 @@
 }
 
 .profile-name {
-
+    font-size: 28px;
+    color: rgb(23, 23, 23);
+    margin-top: 10px;
 }
