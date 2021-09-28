@@ -20,6 +20,7 @@ class Profile extends React.Component {
                 </div>
 
                 <BoardIndexContainer />
+                <hr className="profile-hr"/>
 
             </div>
         )

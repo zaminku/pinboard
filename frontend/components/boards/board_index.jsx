@@ -18,7 +18,7 @@ class BoardIndex extends React.Component {
                 <div className="boards-index">
                     {
                         boards.map(board => (
-                            <BoardIndexItemContainer board={board} key={board.id} />
+                            <BoardIndexItemContainer board={board} key={board.id}/>
                         ))
                     }
                 </div>

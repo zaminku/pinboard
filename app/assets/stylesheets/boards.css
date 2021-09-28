@@ -13,3 +13,25 @@
     display: flex;
     justify-content: center;
 }
+
+.board-box {
+    width: 200px;
+    height: 200px;
+    border: 1px black solid;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.board-box-link {
+    text-decoration: none;
+    color: black;
+}
+
+.boards-index {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
