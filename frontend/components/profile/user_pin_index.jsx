@@ -18,7 +18,7 @@ class UserPinIndex extends React.Component {
         return (
             <div className="pin-index">
                 <Link to="/pins/new"><button className="create-pin-btn">+</button></Link>
-                <h1>Unorganized idea</h1>
+                <h1>Unorganized ideas</h1>
                 <button onClick={() => this.props.openModal("createBoard")}>Create a board!</button>
                 <Link to="/boards"><button>My boards</button></Link>
                 <br />
