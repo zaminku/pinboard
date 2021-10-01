@@ -13,7 +13,7 @@ class PinShow extends React.Component {
     }
 
     componentWillUnmount() {
-        this.props.closeModal();
+        this.props.closeModal()
     }
 
     render() {
