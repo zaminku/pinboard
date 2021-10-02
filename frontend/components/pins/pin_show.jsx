@@ -21,7 +21,7 @@ class PinShow extends React.Component {
         if (pin === undefined) {
             return null;
         }
-        //comment
+
 
         return(
             <div>
