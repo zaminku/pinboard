@@ -58,4 +58,3 @@ class PinShow extends React.Component {
 }
 
 export default PinShow;
-//
