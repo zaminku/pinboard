@@ -13,13 +13,14 @@ class BoardIndexItem extends React.Component {
                 {
                     (currentUserId === board.userId) ? 
                         (
-                            <div>
-                                <li>
-                                    <Link to={`/boards/${board.id}`}>{board.name}</Link>
-                                </li>
-                                    {
-                                        // (board.description) ?  (<li>{board.description}</li>) : (<div></div>)
-                                    }
+                            <div className="board-box-item">
+                                <Link className="board-box-link" to={`/boards/${board.id}`}>
+                                    <div className="board-box">{board.name}</div>
+                                    {/* {board.name} */}
+                                </Link>
+                                {
+                                    // (board.description) ?  (<li>{board.description}</li>) : (<div></div>)
+                                }
                             </div>
                         ) : (<div></div>)
                 }

@@ -13,3 +13,32 @@
     display: flex;
     justify-content: center;
 }
+
+.board-box {
+    width: 200px;
+    height: 200px;
+    /* border: 1px black solid; */
+    background-color: rgb(239, 238, 239);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board-box-link {
+    color: black;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.board-box-item {
+    color: black;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.boards-index {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
