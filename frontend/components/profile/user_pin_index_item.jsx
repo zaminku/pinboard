@@ -18,3 +18,4 @@ class UserPinIndexItem extends React.Component {
 }
 
 export default UserPinIndexItem
+//
