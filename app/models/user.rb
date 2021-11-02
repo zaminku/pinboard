@@ -37,6 +37,10 @@ class User < ApplicationRecord
     has_many :boards,
         foreign_key: :user_id,
         class_name: :Board
+    
+    has_many :comments,
+        foreign_key: :user_id,
+        class_name: :Comment
 
     has_many :liked_pins,
         through: :boards,

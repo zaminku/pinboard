@@ -10,4 +10,4 @@ class CreatePins < ActiveRecord::Migration[5.2]
 
     add_index :pins, :user_id
   end
-end
+end-=

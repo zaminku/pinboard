@@ -31,7 +31,11 @@ class Pin < ApplicationRecord
     
     has_many :boards,
         through: :boards_pins
-
+    
+    has_many :comments,
+        foreign_key: :pin_id,
+        class_name: :Comment,
+        dependent: :destroy
 
     def ensure_photo
         unless self.photo.attached?
