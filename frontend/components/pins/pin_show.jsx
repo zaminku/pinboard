@@ -3,6 +3,7 @@ import PinEditFormContainer from "./pin_edit_form_container";
 import { Link } from "react-router-dom";
 import BoardDropdownContainer from "../boards/board_dropdown_container";
 
+
 class PinShow extends React.Component {
     constructor(props) {
         super(props);
@@ -52,6 +53,7 @@ class PinShow extends React.Component {
                 </div>
                     <br />
                     <BoardDropdownContainer />
+                    <CommentsContainer />
             </div>
         )
     }
