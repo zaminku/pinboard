@@ -9,9 +9,9 @@ class CommentIndexItem extends React.Component {
     render() {
         const { comment } = this.props;
         return (
-            <Link className="" to={`/comments/${comment.id}`}>
-                <img className="comment-pic grid-item" src={comment.photoUrl} />
-            </Link>
+            <div>
+                <p>{comment.text}</p>
+            </div>
         )
     }
 }

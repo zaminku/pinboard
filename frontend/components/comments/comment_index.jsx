@@ -1,6 +1,6 @@
 import React from "react";
 import CommentIndexItemContainer from "./comment_index_item_container";
-import CommentFormContainer from "./comment_form_container";
+// import CommentFormContainer from "./comment_form_container";
 import { Link } from "react-router-dom";
 
 class CommentIndex extends React.Component {

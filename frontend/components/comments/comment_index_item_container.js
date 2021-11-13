@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import CommentIndexItem from "./pin_index_item";
+import CommentIndexItem from "./comment_index_item";
 import { openModal } from "../../actions/modal_actions";
 
 const mSTP = ({ entities, session }, ownProps) => ({
