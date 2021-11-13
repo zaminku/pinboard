@@ -42,6 +42,12 @@ export const fetchComment = commentId => dispatch => (
             err => dispatch(receiveCommentErrors(err.responseJSON)))
 )
 
+export const createComment = comment => dispatch => (
+    APIUtil.createComment(comment)
+        .then(comment => dispatch(receiveComment(comment)),
+            err => dispatch(receiveCommentErrors(err.responseJSON)))
+)
+
 export const updateComment = comment => dispatch => (
     APIUtil.updateComment()
         .then(comment => dispatch(updateComment(comment)),

@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import configureStore from "./store/store";
-import Root from "./components/root"
+import Root from "./components/root";
 
-import {login, logout, signup} from "./actions/session_actions"
-import {fetchPins, fetchPin, createPin, updatePin, deletePin} from "./actions/pin_actions"
-import {fetchBoards, fetchBoard, createBoard, updateBoard, deleteBoard} from "./actions/board_actions"
+import {login, logout, signup} from "./actions/session_actions";
+import {fetchPins, fetchPin, createPin, updatePin, deletePin} from "./actions/pin_actions";
+import {fetchBoards, fetchBoard, createBoard, updateBoard, deleteBoard} from "./actions/board_actions";
 import {savePinToBoard} from "./util/boards_pin_api_util";
-import {fetchComments, fetchComment, createComment} from "./util/comment_api_util"
+import {fetchComments, fetchComment, createComment} from "./actions/comment_actions";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.getState = store.getState;
     window.dispatch = store.dispatch;
 
-    //test comments util
+    //test comments actions
     window.fetchComments = fetchComments;
     window.fetchComment = fetchComment;
     window.createComment = createComment;
@@ -73,8 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.comment = {
         "user_id": 28,
-        "pin_id": 122,
-        "text": "wow, this is the first comment"
+        "pin_id": 114,
+        "text": "wow, there are so many stairs!"
     }
 
 
