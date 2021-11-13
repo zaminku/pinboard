@@ -77,6 +77,12 @@ document.addEventListener("DOMContentLoaded", () => {
         text: "comment 3"
     }
 
+    window.comments = [
+        {text: "west", pin_id: 1},
+        {text: "cali", pin_id: 1},
+        {text: "east", pin_id: 2},
+        {text: "nyc", pin_id: 2}
+    ]
 
     const root = document.getElementById("root");
     ReactDOM.render(<Root store={store} />, root)

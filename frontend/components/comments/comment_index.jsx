@@ -15,23 +15,31 @@ class CommentIndex extends React.Component {
 
     render() {
         const { comments, pinId } = this.props;
-        console.log("comments: ", comments)
-        const pinComments = comments.filter(pinComment => pinComment.pinId === pinId);
-        console.log("comments: ", pinComments)
+    
+        const pinComments = comments.filter(pinComment => {
+            return pinComment.pinId === pinId
+        })
+            // console.log(pinComment) 
+            // console.log("each pin's ID: ", pinComment.pinId)
+            // console.log("pinId: ", pinId) //.pinId === pinId);
+            
+        // console.log("comments: ", comments)
+        // console.log("pin comments: ", pinComments);
+        
         if (pinComments === undefined) {
             return null;
         }
-        console.log("props: ", this.props)
+
         return (
             <div className="comment-index">
-                <Link to="/comments/new"><button className="create-comment-btn">+</button></Link>
+                {/* <Link to="/comments/new"><button className="create-comment-btn">+</button></Link>
                 <button onClick={() => this.props.openModal("createBoard")}>Create a board!</button>
-                <Link to="/boards"><button>My boards</button></Link>
+                <Link to="/boards"><button>My boards</button></Link> */}
                 <br />
                 <div className="grid">
                     {
                         pinComments.map(comment => (
-                            <CommentIndexItemContainer className="" comment={comment} key={comment.id} />
+                            <CommentIndexItemContainer className="" comment={comment} key={comment.id} pinId={pinId}/>
                         ))
                     }
                 </div>

@@ -8,6 +8,7 @@ class CommentIndexItem extends React.Component {
 
     render() {
         const { comment } = this.props;
+        console.log("ownProps: ", this.props.ownProps);
         return (
             <div>
                 <p>{comment.text}</p>
