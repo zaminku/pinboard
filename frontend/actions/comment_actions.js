@@ -48,14 +48,14 @@ export const createComment = comment => dispatch => (
             err => dispatch(receiveCommentErrors(err.responseJSON)))
 )
 
-export const updateComment = comment => dispatch => (
-    APIUtil.updateComment()
-        .then(comment => dispatch(updateComment(comment)),
-            err => dispatch(receiveCommentErrors(err.responseJSON)))
-)
+// export const updateComment = comment => dispatch => (
+//     APIUtil.updateComment()
+//         .then(comment => dispatch(updateComment(comment)),
+//             err => dispatch(receiveCommentErrors(err.responseJSON)))
+// )
 
-export const deleteComment = commentId => dispatch => (
-    APIUtil.deleteComment(commentId)
-        .then(() => dispatch(removeComment(commentId)),
-            err => dispatch(receiveCommentErrors(err.responseJSON)))
-)
+// export const deleteComment = commentId => dispatch => (
+//     APIUtil.deleteComment(commentId)
+//         .then(() => dispatch(removeComment(commentId)),
+//             err => dispatch(receiveCommentErrors(err.responseJSON)))
+// )

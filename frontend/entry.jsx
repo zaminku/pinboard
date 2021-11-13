@@ -72,9 +72,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     window.comment = {
-        "user_id": 28,
-        "pin_id": 114,
-        "text": "wow, there are so many stairs!"
+        "userId": 28,
+        "pinId": 114,
+        "text": "comment 2"
     }
 
 

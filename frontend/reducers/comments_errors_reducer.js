@@ -1,4 +1,4 @@
-import { RECEIVE_COMMENT_ERRORS, CLEAR_COMMENT_ERRORS, RECEIVE_COMMENT, RECEIVE_COMMENTS} from "../actions/board_actions";
+import { RECEIVE_COMMENT_ERRORS, CLEAR_COMMENT_ERRORS, RECEIVE_COMMENT, RECEIVE_COMMENTS} from "../actions/comment_actions";
 
 const commentsErrorsReducer = (state = [], action) => {
     Object.freeze(state);

@@ -15,7 +15,12 @@ class CommentIndex extends React.Component {
 
     render() {
         const { comments, pinId } = this.props;
-        const pinComments = comments.filter(pinComment => pinComment.pinId === this.props.pinId)
+        console.log("comments: ", comments)
+        const pinComments = comments.filter(pinComment => pinComment.pinId === pinId);
+        console.log("comments: ", pinComments)
+        if (pinComments === undefined) {
+            return null;
+        }
         console.log("props: ", this.props)
         return (
             <div className="comment-index">
