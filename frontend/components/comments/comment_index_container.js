@@ -3,7 +3,7 @@ import CommentIndex from "./comment_index";
 import { fetchComments } from "../../actions/comment_actions"
 import { openModal, closeModal } from "../../actions/modal_actions";
 
-const mSTP = ({ entities }) => ({
+const mSTP = ({ entities }, ownProps) => ({
     comments: Object.values(entities.comments)
 })
 

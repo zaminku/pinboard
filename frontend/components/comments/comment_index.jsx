@@ -14,7 +14,9 @@ class CommentIndex extends React.Component {
     }
 
     render() {
-        const { comments } = this.props;
+        const { comments, pinId } = this.props;
+        const pinComments = comments.filter(pinComment => pinComment.pinId === this.props.pinId)
+        console.log("props: ", this.props)
         return (
             <div className="comment-index">
                 <Link to="/comments/new"><button className="create-comment-btn">+</button></Link>
@@ -23,7 +25,7 @@ class CommentIndex extends React.Component {
                 <br />
                 <div className="grid">
                     {
-                        comments.map(comment => (
+                        pinComments.map(comment => (
                             <CommentIndexItemContainer className="" comment={comment} key={comment.id} />
                         ))
                     }

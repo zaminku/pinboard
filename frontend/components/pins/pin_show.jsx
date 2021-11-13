@@ -53,7 +53,7 @@ class PinShow extends React.Component {
                 </div>
                     <br />
                     <BoardDropdownContainer />
-                    <CommentIndexContainer />
+                    <CommentIndexContainer pinId={pinId}/>
             </div>
         )
     }
