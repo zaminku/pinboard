@@ -2,9 +2,11 @@ import { connect } from "react-redux";
 import { createComment } from "../../actions/comment_actions";
 import CommentForm from "./comment_form";
 
-const mSTP = ({ entities, errors }) => ({
+const mSTP = ({ entities, session, errors }, ownProps) => ({
     errors: errors.comments,
-    pins: entities.comments
+    pins: entities.comments,
+    userId: session.id,
+    // pinId: ownProps.match.params.pinId
 })
 
 const mDTP = dispatch => ({

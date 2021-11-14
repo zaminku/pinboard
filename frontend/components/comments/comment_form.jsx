@@ -5,9 +5,9 @@ class CommentForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            pinId: "",
-            userId: "",
-            text
+            pinId: this.props.pinId,
+            userId: this.props.userId,
+            text: ""
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,11 +19,10 @@ class CommentForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-
-        this.props.createComment(comment)
-            .then((comment) => {
+        this.props.createComment(this.state)
+            // .then((comment) => {
                 // return this.props.history.push(`/pins/${Object.keys(this.props.pins)[(Object.keys(this.props.pins).length - 1)]}`)
-            });
+            // });
     }
 
     renderErrors(e) {
@@ -49,7 +48,7 @@ class CommentForm extends React.Component {
                             <br />
                             {this.renderErrors()}
                             <br />
-                            <input type="submit" value="Save" className="comment-submit" />
+                            <input type="submit" value="Submit comment" className="comment-submit" />
                         </div>
                     </form>
                 </div>

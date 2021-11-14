@@ -1,7 +1,7 @@
 import React from "react";
 import CommentIndexItemContainer from "./comment_index_item_container";
-// import CommentFormContainer from "./comment_form_container";
 import { Link } from "react-router-dom";
+import CommentFormContainer from "./comment_form_container";
 
 class CommentIndex extends React.Component {
     constructor(props) {
@@ -38,10 +38,11 @@ class CommentIndex extends React.Component {
                 <br />
                 <div className="grid">
                     {
-                        pinComments.map(comment => (
+                        comments.map(comment => (
                             <CommentIndexItemContainer className="" comment={comment} key={comment.id} pinId={pinId}/>
                         ))
                     }
+                    <CommentFormContainer />
                 </div>
             </div>
         )
