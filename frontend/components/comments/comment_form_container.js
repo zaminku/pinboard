@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { createComment } from "../../actions/comment_actions";
+import { createComment, fetchComments } from "../../actions/comment_actions";
 import CommentForm from "./comment_form";
 
 const mSTP = ({ entities, session, errors }, ownProps) => ({
@@ -10,8 +10,8 @@ const mSTP = ({ entities, session, errors }, ownProps) => ({
 })
 
 const mDTP = dispatch => ({
-    createComment: comment => dispatch(createComment(comment))
-
+    createComment: comment => dispatch(createComment(comment)),
+    fetchComments: () => dispatch(fetchComments())
 })
 
 export default connect(mSTP, mDTP)(CommentForm);

@@ -20,9 +20,12 @@ class CommentForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.createComment(this.state)
-            // .then((comment) => {
-                // return this.props.history.push(`/pins/${Object.keys(this.props.pins)[(Object.keys(this.props.pins).length - 1)]}`)
-            // });
+            .then(() => {
+                this.props.fetchComments()
+            })
+            .then(() => {
+                this.setState({ text: "" })
+            });
     }
 
     renderErrors(e) {

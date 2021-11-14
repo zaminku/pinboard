@@ -42,7 +42,7 @@ class CommentIndex extends React.Component {
                             <CommentIndexItemContainer className="" comment={comment} key={comment.id} pinId={pinId}/>
                         ))
                     }
-                    <CommentFormContainer />
+                    <CommentFormContainer pinId={pinId} />
                 </div>
             </div>
         )
