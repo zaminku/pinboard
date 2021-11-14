@@ -9,7 +9,7 @@ class CommentForm extends React.Component {
             userId: this.props.userId,
             text: ""
         }
-
+        
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -20,8 +20,11 @@ class CommentForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.createComment(this.state)
-            .then(() => {
-                this.props.fetchComments()
+        .then(() => {
+            this.props.fetchComments()
+            const commentInput = document.getElementById("comment-input");
+            console.log(commentInput);
+            commentInput.value = "";
             })
             // .then(() => {
             //     this.setState({ text: "" })
@@ -43,6 +46,7 @@ class CommentForm extends React.Component {
                         <div className="comment-text-input">
                             <input
                                 type="text"
+                                id="comment-input"
                                 value={this.state.title}
                                 onChange={this.update('text')}
                                 placeholder="Add a comment"
