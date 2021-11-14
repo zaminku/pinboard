@@ -23,12 +23,8 @@ class CommentForm extends React.Component {
         .then(() => {
             this.props.fetchComments()
             const commentInput = document.getElementById("comment-input");
-            console.log(commentInput);
             commentInput.value = "";
             })
-            // .then(() => {
-            //     this.setState({ text: "" })
-            // });
     }
 
     renderErrors(e) {
