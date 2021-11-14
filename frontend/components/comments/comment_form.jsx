@@ -23,9 +23,9 @@ class CommentForm extends React.Component {
             .then(() => {
                 this.props.fetchComments()
             })
-            .then(() => {
-                this.setState({ text: "" })
-            });
+            // .then(() => {
+            //     this.setState({ text: "" })
+            // });
     }
 
     renderErrors(e) {
