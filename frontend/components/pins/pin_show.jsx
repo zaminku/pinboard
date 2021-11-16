@@ -23,7 +23,6 @@ class PinShow extends React.Component {
             return null;
         }
 
-
         return(
             <div>
                 <div className="pin-show">

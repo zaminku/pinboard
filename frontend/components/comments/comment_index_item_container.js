@@ -3,7 +3,8 @@ import CommentIndexItem from "./comment_index_item";
 import { openModal } from "../../actions/modal_actions";
 
 const mSTP = ({ entities, session }, ownProps) => ({
-    currentUserId: session.id
+    currentUserId: session.id,
+    commentUserId: ownProps.userId
 })
 
 const mDTP = dispatch => ({

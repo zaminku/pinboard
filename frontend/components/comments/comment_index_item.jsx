@@ -7,10 +7,10 @@ class CommentIndexItem extends React.Component {
     }
 
     render() {
-        const { comment } = this.props;
-        console.log("ownProps: ", this.props.ownProps);
+        const { comment, commentUserId } = this.props;
         return (
             <div>
+                <h4>{commentUserId.firstName + " " + commentUserId.lastName}</h4>
                 <p>{comment.text}</p>
             </div>
         )

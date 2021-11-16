@@ -39,8 +39,8 @@ class CommentIndex extends React.Component {
                                 {console.log("current pinId: ", pinId)}
                                 {console.log("comment pinId: ", comment.pinId)}
                                 {console.log("comment: ", comment)}
-                                {(pinId === comment.pinId) ? (<CommentIndexItemContainer className="" comment={comment} key={comment.id} pinId={pinId} />) : (null) }
-                                {/* <CommentIndexItemContainer className="" comment={comment} key={comment.id} pinId={pinId} /> */}
+                                {/* {(pinId === comment.pinId) ? (<CommentIndexItemContainer comment={comment} pinId={pinId} />) : (null) } */}
+                                <CommentIndexItemContainer className="" userId={comment.userId} comment={comment} key={comment.id} pinId={pinId} />
                             </div>
                         ))
                     }
