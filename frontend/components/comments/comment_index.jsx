@@ -15,7 +15,6 @@ class CommentIndex extends React.Component {
 
     render() {
         const { comments, pinId } = this.props;
-    
         const pinComments = comments.filter(pinComment => {
             return pinComment.pinId === pinId
         })
@@ -32,14 +31,17 @@ class CommentIndex extends React.Component {
 
         return (
             <div className="comment-index">
-                {/* <Link to="/comments/new"><button className="create-comment-btn">+</button></Link>
-                <button onClick={() => this.props.openModal("createBoard")}>Create a board!</button>
-                <Link to="/boards"><button>My boards</button></Link> */}
                 <br />
                 <div className="grid">
                     {
-                        comments.map(comment => (
-                            <CommentIndexItemContainer className="" comment={comment} key={comment.id} pinId={pinId}/>
+                        comments.map((comment, idx) => (
+                            <div>
+                                {console.log("current pinId: ", pinId)}
+                                {console.log("comment pinId: ", comment.pinId)}
+                                {console.log("comment: ", comment)}
+                                {(pinId === comment.pinId) ? (<CommentIndexItemContainer className="" comment={comment} key={comment.id} pinId={pinId} />) : (null) }
+                                {/* <CommentIndexItemContainer className="" comment={comment} key={comment.id} pinId={pinId} /> */}
+                            </div>
                         ))
                     }
                     <CommentFormContainer pinId={pinId} />
