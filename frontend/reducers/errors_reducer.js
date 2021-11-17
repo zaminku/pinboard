@@ -8,7 +8,7 @@ const errorsReducer = combineReducers({
     session: sessionErrorsReducer,
     pins: pinsErrorsReducer,
     boards: boardsErrorsReducer,
-    commments: commentsErrorsReducer
+    // commments: commentsErrorsReducer
 })
 
 export default errorsReducer

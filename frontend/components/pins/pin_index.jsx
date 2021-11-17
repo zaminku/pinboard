@@ -11,6 +11,7 @@ class PinIndex extends React.Component {
     componentDidMount() {
         this.props.fetchPins()
         // this.props.closeModal()
+        //fetch all users here
     }
 
     render () {
@@ -24,6 +25,7 @@ class PinIndex extends React.Component {
                 <div className="grid">
                     {
                         pins.map(pin => (
+                            // pass users as a prop, so that you aren't fetching it every time you go on a pin
                             <PinIndexItemContainer className="" pin={pin} key={pin.id} />
                         ))
                     }

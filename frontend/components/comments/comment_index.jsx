@@ -16,11 +16,12 @@ class CommentIndex extends React.Component {
     render() {
         const { comments, pinId } = this.props;
         const pinComments = comments.filter(pinComment => {
-            return pinComment.pinId === pinId
-        })
-            // console.log(pinComment) 
-            // console.log("each pin's ID: ", pinComment.pinId)
+            // console.log("each comment's pinID: ", pinComment.pinId)
             // console.log("pinId: ", pinId) //.pinId === pinId);
+            // console.log(pinComment.pinId == pinId)
+            return pinComment.pinId == pinId
+        })
+        // console.log(pinComment) 
             
         // console.log("comments: ", comments)
         // console.log("pin comments: ", pinComments);
@@ -34,11 +35,11 @@ class CommentIndex extends React.Component {
                 <br />
                 <div className="grid">
                     {
-                        comments.map((comment, idx) => (
+                        pinComments.map((comment, idx) => (
                             <div>
-                                {console.log("current pinId: ", pinId)}
+                                {/* {console.log("current pinId: ", pinId)}
                                 {console.log("comment pinId: ", comment.pinId)}
-                                {console.log("comment: ", comment)}
+                                {console.log("comment: ", comment)} */}
                                 {/* {(pinId === comment.pinId) ? (<CommentIndexItemContainer comment={comment} pinId={pinId} />) : (null) } */}
                                 <CommentIndexItemContainer className="" userId={comment.userId} comment={comment} key={comment.id} pinId={pinId} />
                             </div>
