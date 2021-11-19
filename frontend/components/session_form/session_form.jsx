@@ -20,6 +20,7 @@ class SessionForm extends React.Component {
         const user = Object.assign({}, this.state);
         this.props.processForm(user)
             .then(() => this.props.closeModal())
+            .then(() => this.props.fetchUsers());
             // .then((user) => this.props.history.push(`/`))
     }
 
@@ -42,6 +43,7 @@ class SessionForm extends React.Component {
         let demoUser = {email: "sample@gmail.com", password: "123456"};
         this.props.processForm(demoUser)
             .then(() => this.props.closeModal())
+            .then(() => this.props.fetchUsers())
             // .then((user) => this.props.history.push(`/`))
     }
 

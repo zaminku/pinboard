@@ -4,6 +4,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import { login, clearErrors } from "../../actions/session_actions"
 import { openModal, closeModal } from "../../actions/modal_actions"
+import { fetchUsers } from "../../actions/user_actions";
 
 const mSTP = ({errors, session}, ownProps) => ({
     errors: errors.session,
@@ -21,7 +22,8 @@ const mDTP = dispatch => ({
         </button>
     ),
     closeModal: () => dispatch(closeModal()),
-    clearErrors: () => dispatch(clearErrors())
+    clearErrors: () => dispatch(clearErrors()),
+    fetchUsers: () => dispatch(fetchUsers())
 })
 
 export default connect(mSTP, mDTP)(SessionForm)

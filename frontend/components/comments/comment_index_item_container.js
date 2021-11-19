@@ -4,7 +4,7 @@ import { openModal } from "../../actions/modal_actions";
 
 const mSTP = ({ entities, session }, ownProps) => ({
     currentUserId: session.id,
-    commentUserId: ownProps.userId
+    commentUser: entities.users[ownProps.commentUserId]
 })
 
 const mDTP = dispatch => ({
