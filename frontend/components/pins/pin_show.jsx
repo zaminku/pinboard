@@ -11,6 +11,8 @@ class PinShow extends React.Component {
 
     componentDidMount() {
         this.props.fetchPin(this.props.pinId);
+        this.props.fetchUsers();
+        // console.log("props: ", this.props)
     }
 
     componentWillUnmount() {
