@@ -23,7 +23,7 @@ const mDTP = dispatch => ({
         </button>
     ),
     closeModal: () => dispatch(closeModal()),
-    clearErrors: () => dispatch(clearErrors()),
+    clearErrors: () => dispatch(clearErrors()), 
     fetchUsers: () => dispatch(fetchUsers())
 })
 

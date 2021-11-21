@@ -1,0 +1,38 @@
+.comment-profile-pic {
+    background-color: rgb(239, 238, 239);
+    color: rgb(23, 23, 23);
+    font-weight: bold;
+    border-radius: 100%;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-index-item {
+    display: flex;
+    flex-direction: row;
+    border-width: 1px;
+    margin-bottom: 10px;
+}
+
+.comment-content {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(220, 220, 220);
+    border-radius: 20px;
+    margin-left: 10px;
+    padding: 12px;
+}
+
+.comment-name {
+    font-weight: bold;
+    width: 100%;
+}
+
+.comment-text {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
