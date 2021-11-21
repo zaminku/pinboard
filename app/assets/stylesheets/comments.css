@@ -81,3 +81,8 @@
     display: flex;
     justify-content: flex-end;
 }
+
+.comments {
+    overflow-y: auto;
+    height: 80%;  
+}
