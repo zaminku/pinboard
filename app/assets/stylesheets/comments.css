@@ -37,7 +37,8 @@
 .comment-text {
     white-space: pre-wrap;
     overflow-wrap: break-word;
-    color: rgb(36, 31, 38)
+    color: rgb(36, 31, 38);
+    width: 80%;
 }
 
 .comment-pic-input {
