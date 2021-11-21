@@ -34,27 +34,25 @@ class CommentForm extends React.Component {
     }
 
     render() {
-
+        const { currentUserFirstName } = this.props;
         return (
-            <div id="comment-form-container">
-                <div id="comment-form">
-                    <form className="comment-form" onSubmit={this.handleSubmit}>
-                        <div className="comment-text-input">
-                            <input
-                                type="text"
-                                id="comment-input"
-                                value={this.state.title}
-                                onChange={this.update('text')}
-                                placeholder="Add a comment"
-                                className="comment-input"
-                            />
-                            <br />
-                            {this.renderErrors()}
-                            <br />
-                            <input type="submit" value="Submit comment" className="comment-submit" />
-                        </div>
-                    </form>
-                </div>
+            <div>
+                <form className="comment-form" onSubmit={this.handleSubmit}>
+                    <div className="comment-pic-input">
+                        <div className="comment-profile-pic">{currentUserFirstName[0]}</div>
+                        <input
+                            type="text"
+                            id="comment-input"
+                            value={this.state.title}
+                            onChange={this.update('text')}
+                            placeholder="Add a public comment"
+                            className="comment-input"
+                        />
+                    </div>
+                    <div className="comment-submit-div">
+                        <input type="submit" value="Done" className="comment-submit" />
+                    </div>
+                </form>
             </div>
         )
     }

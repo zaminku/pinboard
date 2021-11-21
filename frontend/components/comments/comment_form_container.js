@@ -6,6 +6,7 @@ const mSTP = ({ entities, session, errors }, ownProps) => ({
     errors: errors.comments,
     pins: entities.comments,
     userId: session.id,
+    currentUserFirstName: entities.users[session.id].firstName
     // pinId: ownProps.match.params.pinId
 })
 
