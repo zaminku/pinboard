@@ -17,7 +17,7 @@ const pinsReducer = (state = {}, action) => {
             return newState;
         case RECEIVE_BOARD:
             let pins = action.payload.pins;
-            console.log("pins_reducer: ", action.payload);
+            // console.log("pins_reducer: ", action.payload);
             if (pins === undefined) {  //want to check if there are no pins, should be a key of pins
                 return {};
             } else {

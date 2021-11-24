@@ -9,7 +9,7 @@ const boardsReducer = (state = {}, action) => {
         case RECEIVE_BOARDS:
             return action.boards;
         case RECEIVE_BOARD:
-            console.log("boards_reducer, payload returns: ", action.payload);
+            // console.log("boards_reducer, payload returns: ", action.payload);
             newState[action.payload.board.id] = action.payload.board;
             return newState;
             // let boardId = action.payload.board.id;
