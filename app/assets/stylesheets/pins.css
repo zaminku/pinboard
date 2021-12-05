@@ -243,7 +243,7 @@
 .pin-show-box {
     display: flex;
     justify-content: space-evenly;
-    padding: 40px 120px;
+    padding: 40px 60px;
     
     background-color: white;
     border-radius: 32px;
@@ -252,8 +252,8 @@
 
 .pin-show-pic {
     margin-right: 20px;
-    max-width: 50vh;
-    max-height: 50vh;
+    max-width: 65%;
+    max-height: 65%;
     border-radius: 32px;
 }
 
@@ -302,7 +302,7 @@
 .pin-pic {
     width: 10vw;
     max-height: 30vh;
-    border-radius: 20px;
+    border-radius: 35px;
     background-color: white;
     padding-left: 5px;
     padding-bottom: 12px;
