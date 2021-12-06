@@ -24,7 +24,10 @@ class PinIndex extends React.Component {
             default: 8,
             2000: 7,
             1500: 6,
-            1000: 5
+            1250: 5,
+            1000: 4,
+            750: 3,
+            500: 2
         };
         return (
             <div className="pin-index">
