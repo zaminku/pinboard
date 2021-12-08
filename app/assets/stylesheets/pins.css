@@ -306,8 +306,8 @@
 
 .pin-pic {
     max-width: 10vw;
-    min-width: 200px;
-    max-height: 30vh;
+    min-width: 100%;
+    /* max-height: 30vh; */
     border-radius: 35px;
     background-color: white;
     padding-left: 5px;

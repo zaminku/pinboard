@@ -45,6 +45,7 @@ class PinShow extends React.Component {
                             }
                             <h1 className="pin-show-title">{pin.title}</h1>
                             <p className="pin-show-description">{pin.description}</p>
+                            <BoardDropdownContainer />
                             <CommentIndexContainer pinId={pinId}/>
                             {
                                 // (pin.pinUrl !== undefined) ? (<a href={pin.pinUrl}>Link</a>) : (<div></div>)
@@ -54,7 +55,7 @@ class PinShow extends React.Component {
 
                 </div>
                     <br />
-                    <BoardDropdownContainer />
+                    {/* <BoardDropdownContainer /> */}
             </div>
         )
     }
