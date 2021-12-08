@@ -25,10 +25,6 @@ class BoardShow extends React.Component {
 
         return (
             <div className="board-show">
-                <div className="board-show-homepage">
-                    <Link to="/"><button>Home page</button></Link>
-                </div>
-
                 <div className="board-show-box">
                     <h1 className="board-title">{board.name}</h1>
                     {

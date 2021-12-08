@@ -28,10 +28,6 @@ class PinShow extends React.Component {
         return(
             <div>
                 <div className="pin-show">
-                    <div className="pin-show-homepage">
-                        <Link to="/"><button>Home page</button></Link>
-                    </div>
-
                     <div className="pin-show-box">
                         <img className="pin-show-pic" src={pin.photoUrl} />
                         <div className="pin-show-info">
