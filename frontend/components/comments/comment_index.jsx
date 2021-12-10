@@ -33,6 +33,7 @@ class CommentIndex extends React.Component {
         return (
             <div className="comment-index">
                 <div className="comments">
+                    <h1 className="comments-heading">Comments</h1>
                     {
                         pinComments.map((comment, idx) => (
                             <div>

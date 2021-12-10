@@ -243,9 +243,9 @@
 .pin-show-box {
     display: flex;
     justify-content: space-evenly;
-    padding: 75px 150px;
+    padding: 20px 60px;
     min-width: 500px;
-    min-height: 500px;
+    /* min-height: 500px; */
     background-color: white;
     border-radius: 32px;
     box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
@@ -257,7 +257,7 @@
     /* height: 60vw; */
     /* min-width: 60vw;
     min-height: 60vw; */
-    max-width: 750px;
+    max-width: 100%;
     height: auto;
     /* width: 60vw;
     height: 60vw; */

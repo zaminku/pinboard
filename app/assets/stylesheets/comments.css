@@ -91,3 +91,9 @@
 .comment-form {
     margin-top: 20px;
 }
+
+.comments-heading {
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 20px;
+}
