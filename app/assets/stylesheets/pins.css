@@ -244,8 +244,8 @@
     display: flex;
     justify-content: space-evenly;
     padding: 40px 60px;
-    min-width: 80vw;
-    min-height: 80vh;
+    min-width: 500px;
+    min-height: 500px;
     background-color: white;
     border-radius: 32px;
     box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
@@ -253,13 +253,16 @@
 
 .pin-show-pic {
     margin-right: 20px;
-    width: 60vw;
-    height: 60vw;
+    /* width: 60vw; */
+    /* height: 60vw; */
     /* min-width: 60vw;
     min-height: 60vw; */
+    max-width: 100%;
+    max-height: 100%;
     /* width: 60vw;
     height: 60vw; */
     border-radius: 32px;
+    overflow: auto;
 }
 
 .pic-show-info {
