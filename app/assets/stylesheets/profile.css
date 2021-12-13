@@ -37,3 +37,37 @@
 .profile-user > * {
     margin: 5px;
 }
+
+.board-index-container {
+    padding: 20px;
+}
+
+.pin-index {
+    padding: 20px;
+}
+
+.profile-boards-heading {
+    font-size: 28px;
+    font-weight: 600;
+    color: rgb(23, 23, 23);
+    margin-top: 10px;
+    -webkit-font-smoothing: antialiased; 
+    letter-spacing: -1.2px; 
+    word-break: break-word;
+    /* font-family: 'Inter', sans-serif;
+    font-size: 20px; */
+}
+
+.profile-pin-index-heading {
+    font-size: 28px;
+    font-weight: 600;
+    color: rgb(23, 23, 23);
+    margin-top: 10px;
+    -webkit-font-smoothing: antialiased; 
+    letter-spacing: -1.2px; 
+    word-break: break-word;
+}
+
+.your-pins {
+    margin-top: 20px;
+}

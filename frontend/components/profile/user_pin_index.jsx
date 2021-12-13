@@ -17,10 +17,12 @@ class UserPinIndex extends React.Component {
 
     render() {
         const { pins, currentUserId } = this.props;
+        const pinItems = [];
 
-        const pinItems = pins.map(pin => (
-            (pin.userId === currentUserId) ? <PinIndexItemContainer className="" pin={pin} key={pin.id} /> : <div key={pin.id}></div>
+        pins.forEach(pin => (
+            (pin.userId === currentUserId) ? pinItems.push(<PinIndexItemContainer className="" pin={pin} key={pin.id} />) : null
         ));
+        
         const breakpointColumnsObj = {
             default: 8,
             2000: 7,
@@ -34,28 +36,31 @@ class UserPinIndex extends React.Component {
         return (
             <div className="pin-index">
                 <Link to="/pins/new"><button className="create-pin-btn">+</button></Link>
-                <h1>Unorganized ideas</h1>
-                <button onClick={() => this.props.openModal("createBoard")}>Create a board!</button>
-                {/* <Link to="/boards"><button>My boards</button></Link> */}
-                <br />
+                <h1 className="profile-pin-index-heading">Unorganized ideas</h1>
+
                 <Masonry
                     breakpointCols={breakpointColumnsObj}
-                    className="my-masonry-grid"
+                    className="my-masonry-grid your-pins"
                     columnClassName="my-masonry-grid_column"
                 >
                     {pinItems}
                 </Masonry>
 
-                {/* <div className="grid">
-                    {
-                        pins.map(pin => (
-                            (pin.userId === currentUserId) ? <UserPinIndexItem className="" pin={pin} key={pin.id} /> : <div key={pin.id}></div>
-                        ))
-                    }
-                </div> */}
             </div>
         )
     }
 }
 
 export default UserPinIndex;
+
+
+
+
+
+{/* <div className="grid">
+    {
+        pins.map(pin => (
+            (pin.userId === currentUserId) ? <UserPinIndexItem className="" pin={pin} key={pin.id} /> : <div key={pin.id}></div>
+        ))
+    }
+</div> */}
