@@ -8,7 +8,8 @@ import { fetchUsers } from "../../actions/user_actions"
 const mSTP = ({entities, session}, ownProps) => ({
     pinId: ownProps.match.params.pinId,
     pin: entities.pins[ownProps.match.params.pinId],
-    currentUserId: session.id
+    currentUserId: session.id,
+    users: entities.users
 })
 
 const mDTP = dispatch => ({

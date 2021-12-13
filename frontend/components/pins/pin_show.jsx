@@ -20,11 +20,12 @@ class PinShow extends React.Component {
     }
 
     render() {
-        const {pin, pinId, currentUserId, openModal} = this.props;
-        if (pin === undefined) {
+        const {pin, pinId, currentUserId, openModal, users} = this.props;
+        // const pinUser = users[pin.userId];
+        // console.log("pinUser: ", pinUser)
+        if (pin === undefined || users === undefined) {
             return null;
         }
-
         return(
             <div>
                 <div className="pin-show">
@@ -40,18 +41,16 @@ class PinShow extends React.Component {
                                 ) : <div></div>
                             }
                             <BoardDropdownContainer />
+
                             <h1 className="pin-show-title">{pin.title}</h1>
                             <p className="pin-show-description">{pin.description}</p>
+                            {/* <p>{pinUser.firstName}</p> */}
+
                             <CommentIndexContainer pinId={pinId}/>
-                            {
-                                // (pin.pinUrl !== undefined) ? (<a href={pin.pinUrl}>Link</a>) : (<div></div>)
-                            }
                         </div>
                     </div>
 
                 </div>
-                    <br />
-                    {/* <BoardDropdownContainer /> */}
             </div>
         )
     }
