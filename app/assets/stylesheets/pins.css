@@ -314,8 +314,10 @@
     border-radius: 25px;
     background-color: white;
     padding-left: 5px;
-    padding-bottom: 12px;
+    padding-bottom: 12px; 
 }
+
+
 
 .grid {
     display: inline-flex;
@@ -388,3 +390,4 @@
   background: grey;
   margin-bottom: 30px;
 }
+

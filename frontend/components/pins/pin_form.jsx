@@ -69,6 +69,7 @@ class PinForm extends React.Component {
                     <form className="pin-form" onSubmit={this.handleSubmit}>
                         <div id="pin-preview-box">
                             {preview}
+                            <i className="fas fa-arrow-alt-circle-up"></i>
                             <br />
                             {/* <input
                                 type="file"
