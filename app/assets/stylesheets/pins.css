@@ -245,6 +245,7 @@
     justify-content: space-evenly;
     padding: 20px 60px;
     min-width: 500px;
+    height: auto;
     /* min-height: 500px; */
     background-color: white;
     border-radius: 32px;
@@ -253,16 +254,10 @@
 
 .pin-show-pic {
     margin-right: 70px;
-    /* width: 60vw; */
-    /* height: 60vw; */
-    /* min-width: 60vw;
-    min-height: 60vw; */
-    max-width: 100%;
+    max-width: 900px;
     height: auto;
-    /* width: 60vw;
-    height: 60vw; */
     border-radius: 32px;
-    overflow: auto;
+    /* overflow: auto; */
 }
 
 .pic-show-info {

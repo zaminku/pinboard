@@ -35,8 +35,7 @@ class PinShow extends React.Component {
                             {
                                 (currentUserId === pin.userId) ? (
                                     <div>
-                                        {/* <PinEditFormContainer pin={pin} /> */}
-                                        <button className="pin-show-edit-button" onClick={() => openModal('editPin', pinId)}>    ...    </button>
+                                        <button className="pin-show-edit-button" onClick={() => openModal('editPin', pinId)}>...</button>
                                     </div>
                                 ) : <div></div>
                             }
