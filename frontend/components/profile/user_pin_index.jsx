@@ -36,7 +36,7 @@ class UserPinIndex extends React.Component {
         return (
             <div className="pin-index">
                 <Link to="/pins/new"><button className="create-pin-btn">+</button></Link>
-                <h1 className="profile-pin-index-heading">Unorganized ideas</h1>
+                <h1 className="profile-pin-index-heading">Unorganized Ideas</h1>
 
                 <Masonry
                     breakpointCols={breakpointColumnsObj}
