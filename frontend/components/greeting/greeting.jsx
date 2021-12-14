@@ -7,11 +7,14 @@ const Greeting = ({currentUser, logout, openModal}) => {
         <nav className="login-signup top-nav-item">
             {/* <Link className="login-button" to="/login">Log in</Link>
             <Link className="signup-button" to="/signup">Sign up</Link> */}
-
-            <button className="greeting-button login" onClick={() => openModal('login')}>Log in</button>
-            {/* &nbsp;or&nbsp; */}
-            <span>     </span>
-            <button className="greeting-button signup" onClick={() => openModal('signup')}>Sign up</button>
+            <div className="navbar-links">
+                <a href="https://www.linkedin.com/in/zamin-k/" target="_blank"><i className="navbar-icon fab fa-linkedin"></i></a>
+                <a href="https://github.com/zaminku" target="_blank"><i className="navbar-icon fab fa-github"></i></a>
+                <button className="greeting-button login" onClick={() => openModal('login')}>Log in</button>
+                {/* &nbsp;or&nbsp; */}
+                <span>     </span>
+                <button className="greeting-button signup" onClick={() => openModal('signup')}>Sign up</button>
+            </div>
         </nav>
     )
     const personalGreeting = () => (

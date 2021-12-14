@@ -26,8 +26,9 @@ const pinsReducer = (state = {}, action) => {
         case RECEIVE_BOARDS:
             // to make sure that it doesn't flash the previous pins state (and flash the previous pins from the pins state on a board)...
             // return {}; 
-        // case RECEIVE_BOARDS_PIN:
+        case RECEIVE_BOARDS_PIN:
             // newState[action.payload.pinId] = action.payload // WIP
+            return state;
         default:
             return state;
     }

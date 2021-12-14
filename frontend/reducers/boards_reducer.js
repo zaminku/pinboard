@@ -19,7 +19,9 @@ const boardsReducer = (state = {}, action) => {
             delete newState[action.boardId];
             return newState;
         case RECEIVE_BOARDS_PIN:
-            return newState[action.payload.boardId];
+            // console.log("payload!: ", action.payload)
+            return state;
+            // return newState[action.payload.boardId];
         default:
             return state;
     }

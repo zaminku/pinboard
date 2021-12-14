@@ -13,6 +13,7 @@ import BoardShowContainer from "./boards/board_show_container";
 import BoardIndexContainer from "./boards/board_index_container";
 import ProfileContainer from "./profile/profile_container";
 import NavbarContainer from "./navbar/navbar_container";
+import WelcomeContainer from "./welcome/welcome_container";
 
 const App = () => (
     <div>
@@ -47,6 +48,9 @@ const App = () => (
             {/* <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} /> */}
             {/* <AuthRoute exact path="/" component={PinIndexContainer} /> */}
+        </Switch>
+        <Switch>
+            <AuthRoute exact path="/" component={WelcomeContainer} />
         </Switch>
     </div>
 )

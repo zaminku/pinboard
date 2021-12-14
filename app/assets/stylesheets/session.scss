@@ -14,3 +14,37 @@
     font-size: 20px;
     margin-top: 0px;
 }
+
+.welcome-heading {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40vh;
+    font-family: 'Inter', sans-serif;
+    font-size: 80px;
+}
+
+.get-started-btn {
+    border-radius: 28px;
+    border-style: solid;
+    border-color: darkgrey;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    margin: 8px;
+    padding: 12px 18px;
+    background-color: #E60023;
+    border-color: #E60023;
+    color: white;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.welcome {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
