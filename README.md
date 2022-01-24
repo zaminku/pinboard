@@ -20,9 +20,9 @@ Pinboard is a full-stack Pinterest clone, which allows for users to view and org
 - Boards are used to organize pins in whichever way the user chooses to
 - Users can only add pins to their own created boards
 
-## Comments
+### Comments
 
-## User Profile
+### User Profile
 
 ## Future Work
 - Following users
